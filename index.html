@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfa Pymes | Corredores de Seguros</title>
+
+    <meta name="description" content="Corredores de seguros independientes para pymes chilenas. Paga, declara siniestros y gestiona tu póliza en un solo lugar.">
+    <meta property="og:title" content="Alfa Pymes | Corredores de Seguros">
+    <meta property="og:description" content="Seguros simples, para que tu pyme siga funcionando.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_CL">
+
+    <link rel="icon" type="image/png" href="./AlfaPymes/assets/img/alfapyme_favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/alfapyme_favicon.png">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+    <a href="#inicio" class="skip-link">Saltar al contenido principal</a>
+
+    <!-- ============ NAV ============ -->
+    <header class="main-header">
+        <div class="container nav-container">
+            <a href="#inicio" class="logo" aria-label="Alfa Pymes - Inicio">
+                <img src="./assets/img/logo-full.svg" alt="Alfa Pymes - Corredores de Seguros" class="logo-img">
+            </a>
+
+            <nav class="nav-menu" aria-label="Menú principal">
+                <a href="#inicio" class="active" aria-current="page">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#companias">Por compañía</a>
+                <a href="#cotizar">Cotizar</a>
+                <a href="#nuevos-clientes">Nuevos clientes</a>
+                <a href="#preguntas">Preguntas</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#cotizar" class="btn btn-outline btn-nav">Cotizar</a>
+                <a href="#companias" class="btn btn-primary btn-nav">Declarar siniestro</a>
+            </div>
+
+            <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ============ HERO ============ -->
+        <section id="inicio" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <p class="eyebrow">Corredores de seguros</p>
+                    <h1>Seguros simples, para que tu pyme siga funcionando.</h1>
+                    <p class="hero-lead">Cotiza, contrata y gestiona tus pólizas de hogar, autos y empresa en un solo lugar — con acompañamiento real cuando más lo necesitas.</p>
+
+                    <div class="hero-ctas">
+                        <a href="#cotizar" class="btn btn-primary">Cotizar ahora</a>
+                        <a href="#companias" class="btn btn-outline">Declarar un siniestro</a>
+                    </div>
+
+                    <ul class="trust-list">
+                        <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span> 5 compañías aliadas</li>
+                        <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span> Asistencia 24/7</li>
+                        <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span> Sin letra chica</li>
+                    </ul>
+                </div>
+
+                <div class="hero-image">
+                    <!-- Imagen editable: cambia HERO_IMAGE_URL en assets/js/script.js para reemplazarla -->
+                    <img id="hero-img" src="" alt="Corredores de seguros acompañando a una pyme">
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ PANEL DE SERVICIOS (prioridad #1: clientes existentes) ============ -->
+        <section id="servicios" class="services-section container">
+            <p class="eyebrow eyebrow-center">Servicios</p>
+            <h2 class="section-title">Todo lo que necesitas, en un solo panel</h2>
+            <p class="section-lead">Desde pagar tu póliza hasta declarar un siniestro — cada trámite tiene su propio espacio, claro y directo.</p>
+
+            <div class="grid-services">
+                <a href="#companias" class="service-card">
+                    <span class="service-icon icon-a material-symbols-outlined" aria-hidden="true">payments</span>
+                    <h3>Pagos en línea</h3>
+                    <p>Paga tu póliza en el sitio de tu compañía aseguradora.</p>
+                    <span class="service-link">Ver compañías <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span>
+                </a>
+                <a href="#companias" class="service-card">
+                    <span class="service-icon icon-b material-symbols-outlined" aria-hidden="true">sync_alt</span>
+                    <h3>Inscripción PAT / PAC</h3>
+                    <p>Activa el pago automático de la póliza. Incluye video explicativo.</p>
+                    <span class="service-link">Ver cómo inscribirse <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span>
+                </a>
+                <a href="#companias" class="service-card">
+                    <span class="service-icon icon-c material-symbols-outlined" aria-hidden="true">support_agent</span>
+                    <h3>Asistencia en línea</h3>
+                    <p>Contacto directo de asistencia para Hogar y Autos.</p>
+                    <span class="service-link">Ver contactos <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span>
+                </a>
+                <a href="#companias" class="service-card">
+                    <span class="service-icon icon-d material-symbols-outlined" aria-hidden="true">gps_fixed</span>
+                    <h3>Contratación del GPS</h3>
+                    <p>Contrata el servicio de GPS para tu vehículo según la compañía.</p>
+                    <span class="service-link">Ver opciones <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span>
+                </a>
+                <a href="#cotizar" class="service-card">
+                    <span class="service-icon icon-a material-symbols-outlined" aria-hidden="true">request_quote</span>
+                    <h3>Cotización</h3>
+                    <p>Cotiza seguros de Hogar, Autos y Pymes en minutos.</p>
+                    <span class="service-link">Cotizar ahora <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span>
+                </a>
+                <a href="#companias" class="service-card">
+                    <span class="service-icon icon-b material-symbols-outlined" aria-hidden="true">report</span>
+                    <h3>Declarar siniestro</h3>
+                    <p>Inicia tu declaración directo con la compañía correspondiente.</p>
+                    <span class="service-link">Declarar ahora <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span>
+                </a>
+                <a href="#inspeccion" class="service-card">
+                    <span class="service-icon icon-c material-symbols-outlined" aria-hidden="true">fact_check</span>
+                    <h3>Solicitud de inspección</h3>
+                    <p>Agenda una inspección de tu propiedad o vehículo con nuestro equipo.</p>
+                    <span class="service-link">Llenar formulario <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span>
+                </a>
+                <a href="#preguntas" class="service-card">
+                    <span class="service-icon icon-d material-symbols-outlined" aria-hidden="true">help</span>
+                    <h3>Preguntas frecuentes</h3>
+                    <p>Respuestas rápidas a las dudas comunes.</p>
+                    <span class="service-link">Ver preguntas <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></span>
+                </a>
+            </div>
+        </section>
+
+        <!-- ============ ACCESO DIRECTO POR COMPAÑÍA ============ -->
+        <section id="companias" class="companies-section">
+            <div class="container">
+                <p class="eyebrow eyebrow-center">Acceso directo</p>
+                <h2 class="section-title">Nuestras 5 compañías aseguradoras</h2>
+                <p class="section-lead">Elige tu compañía y accede a pagos, siniestros, PAT/PAC y asistencia — todo desde una sola tarjeta.</p>
+
+                <div class="companies-layout">
+                    <div class="grid-companies">
+                        <!-- Cada compañía se abre y muestra sus 4 accesos, en vez de repetir 4 listados separados -->
+                        <details class="company-card">
+                            <summary>
+                                <span class="company-badge">HDI</span>
+                                <span class="company-name">HDI Seguros</span>
+                                <span class="material-symbols-outlined chevron" aria-hidden="true">expand_more</span>
+                            </summary>
+                            <ul class="company-links">
+                                <li><a href="#">Pagar en línea <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a></li>
+                                <li><a href="#">Declarar siniestro <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a></li>
+                                <li><a href="#">Inscribir PAT/PAC <span class="tag-video">+ video</span></a></li>
+                                <li><a href="#">Asistencia 24/7 <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a></li>
+                            </ul>
+                        </details>
+
+                        <details class="company-card">
+                            <summary>
+                                <span class="company-badge">MAP</span>
+                                <span class="company-name">MAPFRE</span>
+                                <span class="material-symbols-outlined chevron" aria-hidden="true">expand_more</span>
+                            </summary>
+                            <ul class="company-links">
+                                <li><a href="#">Pagar en línea <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a></li>
+                                <li><a href="#">Declarar siniestro <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a></li>
+                                <li><a href="#">Inscribir PAT/PAC <span class="tag-video">+ video</span></a></li>
+                                <li><a href="#">Asistencia 24/7 <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a></li>
+                            </ul>
+                        </details>
+
+                        <details class="company-card">
+                            <summary>
+                                <span class="company-badge">SUR</span>
+                                <span class="company-name">Seguros Sura</span>
+                                <span class="material-symbols-outlined chevron" aria-hidden="true">expand_more</span>
+                            </summary>
+                            <ul class="company-links">
+                                <li><a href="#">Pagar en línea <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a></li>
+                                <li><a href="#">Declarar siniestro <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a></li>
+                                <li><a href="#">Inscribir PAT/PAC <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a></li>
+                                <li><a href="#">Asistencia 24/7 <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a></li>
+                            </ul>
+                        </details>
+
+                        <details class="company-card">
+                            <summary>
+                                <span class="company-badge">CN</span>
+                                <span class="company-name">Chilena Consolidada</span>
+                                <span class="material-symbols-outlined chevron" aria-hidden="true">expand_more</span>
+                            </summary>
+                            <ul class="company-links">
+                                <li><a href="#">Pagar en línea <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a></li>
+                                <li><a href="#">Declarar siniestro <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a></li>
+                                <li><a href="#">Inscribir PAT/PAC <span class="tag-video">+ video</span></a></li>
+                                <li><a href="#">Asistencia 24/7 <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a></li>
+                            </ul>
+                        </details>
+
+                        <details class="company-card">
+                            <summary>
+                                <span class="company-badge">BC</span>
+                                <span class="company-name">BCI Seguros</span>
+                                <span class="material-symbols-outlined chevron" aria-hidden="true">expand_more</span>
+                            </summary>
+                            <ul class="company-links">
+                                <li><a href="#">Pagar en línea <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a></li>
+                                <li><a href="#">Declarar siniestro <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a></li>
+                                <li><a href="#">Inscribir PAT/PAC <span class="tag-video">+ video</span></a></li>
+                                <li><a href="#">Asistencia 24/7 <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a></li>
+                            </ul>
+                        </details>
+                    </div>
+
+                    <!-- Contenido único que no se repite en ningún otro bloque: el video explicativo -->
+                    <div class="video-card">
+                        <button class="play-btn" type="button" aria-label="Reproducir video explicativo">
+                            <span class="material-symbols-outlined" aria-hidden="true">play_arrow</span>
+                        </button>
+                        <h3>Video explicativo general</h3>
+                        <p>Cómo funciona el PAT/PAC, en menos de 3 minutos.</p>
+                    </div>
+                </div>
+
+                <p class="companies-note">¿Un link no funciona? Pasa esto con los portales de las compañías — escríbenos por WhatsApp y lo resolvemos directo.</p>
+            </div>
+        </section>
+
+        <!-- ============ CTA SINIESTRO ============ -->
+        <section class="claim-cta container">
+            <div class="claim-cta-inner">
+                <div>
+                    <h2>¿Necesitas declarar un siniestro?</h2>
+                    <p>Te dirigimos directo a cada compañía. Si tienes dudas, escríbenos y te lo resolvemos por ti.</p>
+                </div>
+                <div class="claim-cta-actions">
+                    <a href="#companias" class="btn btn-primary">Declarar por compañía</a>
+                    <a href="https://wa.me/569XXXXXXXX" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Escribir por WhatsApp</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ COTIZAR ============ -->
+        <section id="cotizar" class="quote-ramo-section container">
+            <p class="eyebrow eyebrow-center">Cotización</p>
+            <h2 class="section-title">Cotiza por ramo</h2>
+            <p class="section-lead">Elige qué quieres proteger y te mostramos opciones de varias compañías.</p>
+
+            <div class="grid-ramos">
+                <div class="ramo-card">
+                    <span class="ramo-icon material-symbols-outlined" aria-hidden="true">house</span>
+                    <h3>Hogar</h3>
+                    <p>Incendio, robo, sismo y responsabilidad civil.</p>
+                    <a href="#inicio" class="btn btn-primary btn-block js-cotizar-ramo" data-ramo="hogar">Cotizar Hogar</a>
+                </div>
+                <div class="ramo-card">
+                    <span class="ramo-icon material-symbols-outlined" aria-hidden="true">directions_car</span>
+                    <h3>Autos</h3>
+                    <p>Todo riesgo, daños a terceros y asistencia en ruta.</p>
+                    <a href="#inicio" class="btn btn-primary btn-block js-cotizar-ramo" data-ramo="autos">Cotizar Autos</a>
+                </div>
+                <div class="ramo-card">
+                    <span class="ramo-icon material-symbols-outlined" aria-hidden="true">storefront</span>
+                    <h3>Pymes</h3>
+                    <p>Protección para tu local, equipo y continuidad operativa.</p>
+                    <a href="#inicio" class="btn btn-primary btn-block js-cotizar-ramo" data-ramo="pymes">Cotizar Pymes</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ SOLICITUD DE INSPECCIÓN ============ -->
+        <section id="inspeccion" class="inspection-section container">
+            <p class="eyebrow eyebrow-center">Solicitud de inspección</p>
+            <h2 class="section-title">Agenda una visita técnica</h2>
+            <p class="section-lead">Para pólizas de hogar o pymes que requieren inspección previa a la contratación.</p>
+
+            <form class="inspection-form" novalidate>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="nombre-completo">Nombre completo</label>
+                        <input type="text" id="nombre-completo" name="nombre-completo" placeholder="Tu nombre" required>
+                        <span class="field-error" id="error-nombre-completo" aria-live="polite"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="rut">RUT</label>
+                        <input type="text" id="rut" name="rut" placeholder="12.345.678-9" required inputmode="text" maxlength="12">
+                        <span class="field-error" id="error-rut" aria-live="polite"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="correo-inspeccion">Correo</label>
+                        <input type="email" id="correo-inspeccion" name="correo-inspeccion" placeholder="tucorreo@empresa.cl" required>
+                        <span class="field-error" id="error-correo-inspeccion" aria-live="polite"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="+56 9...." required>
+                        <span class="field-error" id="error-telefono" aria-live="polite"></span>
+                    </div>
+                    <div class="form-group form-group-full">
+                        <label for="direccion">Dirección a inspeccionar</label>
+                        <input type="text" id="direccion" name="direccion" placeholder="Calle, número, comuna" required>
+                        <span class="field-error" id="error-direccion" aria-live="polite"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="tipo-seguro">Tipo de seguro</label>
+                        <select id="tipo-seguro" name="tipo-seguro">
+                            <option>Hogar</option>
+                            <option>Pymes</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="disponibilidad">Disponibilidad preferida</label>
+                        <input type="text" id="disponibilidad" name="disponibilidad" placeholder="Ej: tardes en la tarde">
+                    </div>
+                    <div class="form-group form-group-full">
+                        <label for="comentarios">Comentarios</label>
+                        <textarea id="comentarios" name="comentarios" rows="4" placeholder="Detalles adicionales"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Enviar solicitud</button>
+            </form>
+
+            <div class="form-success" id="inspection-success" hidden>
+                <span class="material-symbols-outlined" aria-hidden="true">check_circle</span>
+                <h3>Solicitud enviada</h3>
+                <p>Un ejecutivo se pondrá en contacto para agendar la visita técnica.</p>
+                <button type="button" class="btn btn-outline" id="btn-otra-solicitud">Enviar otra solicitud</button>
+            </div>
+        </section>
+
+        <!-- ============ NUEVOS CLIENTES ============ -->
+        <section id="nuevos-clientes" class="new-clients-section container">
+            <p class="eyebrow eyebrow-center">Nuevos clientes</p>
+            <h2 class="section-title">Empezar es simple</h2>
+
+            <div class="grid-steps">
+                <div class="step-card">
+                    <span class="step-number">1</span>
+                    <h3>Cotiza</h3>
+                    <p>Pide el valor de tu seguro ideal según tus necesidades.</p>
+                </div>
+                <div class="step-card">
+                    <span class="step-number">2</span>
+                    <h3>Compara</h3>
+                    <p>Te mostramos opciones de varias compañías.</p>
+                </div>
+                <div class="step-card">
+                    <span class="step-number">3</span>
+                    <h3>Contrata</h3>
+                    <p>Firma en digital, sin papeleo.</p>
+                </div>
+                <div class="step-card">
+                    <span class="step-number">4</span>
+                    <h3>Te acompañamos</h3>
+                    <p>Asistencia y soporte para toda tu póliza.</p>
+                </div>
+            </div>
+
+            <div class="new-clients-cta">
+                <a href="#cotizar" class="btn btn-primary">Cotizar ahora</a>
+            </div>
+        </section>
+
+        <!-- ============ QUIÉNES SOMOS ============ -->
+        <section id="quienes-somos" class="about-section">
+            <div class="container about-container">
+                <div class="about-content">
+                    <p class="eyebrow">Quiénes somos</p>
+                    <h2>Llevamos años ayudando a personas y pymes chilenas a elegir el seguro correcto.</h2>
+                    <p>Somos corredores independientes: comparamos entre distintas compañías para encontrar la póliza que mejor se ajusta a tu presupuesto y necesidad real — no la que más nos convenga vender.</p>
+                    <a href="#servicios" class="btn btn-outline">Ver todos los servicios</a>
+                </div>
+
+                <div class="stats-card">
+                    <div class="stat"><span class="stat-number">5</span><span class="stat-label">Compañías aseguradoras aliadas</span></div>
+                    <div class="stat"><span class="stat-number">+10</span><span class="stat-label">Años de experiencia</span></div>
+                    <div class="stat"><span class="stat-number">3</span><span class="stat-label">Ramos: Hogar · Autos · Pymes</span></div>
+                    <div class="stat"><span class="stat-number">24/7</span><span class="stat-label">Asistencia en línea</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ FAQ ============ -->
+        <section id="preguntas" class="faq-section container">
+            <p class="eyebrow eyebrow-center">Preguntas frecuentes</p>
+            <h2 class="section-title">Dudas comunes</h2>
+
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>¿Cómo declaro un siniestro?</summary>
+                    <p>Contacta directamente con tu compañía desde la sección "Acceso directo por compañía". Si tienes problemas, escríbenos por WhatsApp y te acompañamos en la gestión.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Qué es el PAT/PAC y por qué me conviene?</summary>
+                    <p>Es el pago automático de tu póliza, con cargo a tu cuenta o tarjeta. Evita atrasos y la posible pérdida de cobertura por no pago.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Puedo cotizar sin comprometerme a contratar?</summary>
+                    <p>Sí, cotizar no tiene costo ni compromiso. Te mostramos opciones y decides cuándo (o si) contratar.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>¿Un link de mi compañía no funciona, qué hago?</summary>
+                    <p>Escríbenos por WhatsApp y te ayudamos a resolverlo directamente, sin que tengas que perder tiempo con la compañía.</p>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#inicio" class="logo footer-logo" aria-label="Alfa Pymes - Inicio">
+                    <img src="./assets/img/logo-full-light.svg" alt="Alfa Pymes - Corredores de Seguros" class="logo-img">
+                </a>
+                <p class="footer-tagline">Corredores de seguros independientes. Te acompañamos en cada trámite para que estés siempre protegido.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Servicios</h4>
+                <a href="#companias">Pagos en línea</a>
+                <a href="#companias">Inscripción PAT/PAC</a>
+                <a href="#cotizar">Cotización</a>
+                <a href="#companias">Declarar siniestro</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Empresa</h4>
+                <a href="#quienes-somos">Quiénes somos</a>
+                <a href="#nuevos-clientes">Nuevos clientes</a>
+                <a href="#preguntas">Preguntas frecuentes</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <a href="https://wa.me/569XXXXXXXX" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                <a href="mailto:contacto@alfapymes.cl">contacto@alfapymes.cl</a>
+                <a href="#contacto">Formulario de contacto</a>
+            </div>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Alfa Pymes Corredores de Seguros. Todos los derechos reservados.</p>
+            <p>Santiago, Chile</p>
+        </div>
+    </footer>
+
+    <!-- ============ BOTÓN FLOTANTE (se mantiene) ============ -->
+    <a href="https://wa.me/569XXXXXXXX" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat en WhatsApp">
+        <svg viewBox="0 0 32 32" class="whatsapp-icon" aria-hidden="true"><path d="M16 0a16 16 0 0 0-16 16 16 16 0 0 0 2.45 8.44L0 32l7.74-2a16 16 0 1 0 8.26-30zm8.68 22.15c-.34.95-1.7 1.74-2.6 1.87-.6.09-1.39.13-4.14-.99a17.7 17.7 0 0 1-7.14-6.19 8.27 8.27 0 0 1-1.68-4.4c0-2.4 1.25-3.56 1.7-4 .4-.4.86-.5 1.14-.5h.82c.26 0 .6.1 1 .92l1.32 3.19c.1.2.16.44.02.72s-.2.43-.41.67l-.62.72c-.2.24-.42.5-.18.92a11.12 11.12 0 0 0 2.89 3.56 9.25 9.25 0 0 0 4.17 2.53c.42.2.67.17.92-.12s1.08-1.25 1.37-1.68c.28-.43.57-.36.95-.22l3.43 1.62c.38.19.64.29.73.45.1.15.1.89-.24 1.84z" fill="#fff"/></svg>
+        <span class="whatsapp-tooltip">Conversar</span>
+    </a>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
