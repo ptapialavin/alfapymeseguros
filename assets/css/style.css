@@ -306,6 +306,14 @@ body {
   font-size: 0.75rem; font-weight: 800;
   flex-shrink: 0;
 }
+.company-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
 .company-name { flex: 1; }
 .chevron { transition: transform var(--transition); color: var(--color-text-light); }
 .company-card[open] .chevron { transform: rotate(180deg); }
