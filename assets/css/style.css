@@ -4,7 +4,8 @@
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; overflow-x: hidden; }
+body { overflow-x: hidden; }
 
 img { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; }
@@ -166,6 +167,9 @@ body {
   z-index: 150;
 }
 .nav-menu.open { right: 0; }
+
+/* Bloquea el scroll del body mientras el menú móvil está abierto (evita el "salto"/desplazamiento) */
+body.menu-open { position: fixed; left: 0; right: 0; width: 100%; }
 
 .nav-menu a {
   position: relative;
@@ -481,9 +485,15 @@ body {
   position: fixed; bottom: 20px; right: 20px; width: 56px; height: 56px;
   background: #25d366; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  box-shadow: var(--shadow-md); z-index: 120; transition: transform var(--transition);
+  box-shadow: var(--shadow-md); z-index: 120;
+  transition: transform var(--transition), opacity var(--transition), visibility var(--transition);
 }
 .whatsapp-btn:hover { transform: scale(1.08); }
+
+/* El menú móvil (z-index 150) queda por encima del botón flotante (z-index 120) y ambos
+   comparten la esquina inferior derecha en pantallas chicas: mientras el menú está abierto,
+   ocultamos el botón para que no se vea "metido" dentro del panel del menú. */
+body.menu-open .whatsapp-btn { opacity: 0; visibility: hidden; pointer-events: none; }
 .whatsapp-icon { width: 28px; height: 28px; }
 .whatsapp-tooltip {
   position: absolute; right: 68px; background: var(--color-text); color: #fff;

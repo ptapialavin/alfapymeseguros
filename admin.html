@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel de edición — Alfa Pymes</title>
+    <meta name="robots" content="noindex, nofollow" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/admin.css" />
+  </head>
+  <body class="admin-body">
+    <header class="admin-header">
+      <div class="container admin-header-inner">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <img src="./assets/img/logo-full.svg" alt="Alfa Pymes" class="logo-img" />
+          <div>
+            <h1>Panel de edición del sitio</h1>
+            <p>Fotos, imágenes, links y secciones — sin tocar código</p>
+          </div>
+        </div>
+        <span id="admin-status" class="admin-status">Cargando…</span>
+      </div>
+    </header>
+
+    <main class="container" style="max-width: 780px;">
+      <div class="admin-intro">
+        <h2>Cómo funciona</h2>
+        <ol>
+          <li><strong>1. Edita los campos</strong> que quieras cambiar más abajo (fotos, links de cada compañía, textos de portada, WhatsApp, etc).</li>
+          <li><strong>2. Vista previa:</strong> abre el sitio en una pestaña nueva mostrando tus cambios, solo en este navegador — nadie más los ve todavía.</li>
+          <li><strong>3. Descargar content.json:</strong> guarda el archivo actualizado en tu computador.</li>
+          <li><strong>4. Publicar:</strong> reemplaza el archivo <code>content.json</code> en tu repositorio (arrastrándolo en la web de GitHub o con <code>git add / commit / push</code>) para que los cambios se vean en el sitio real.</li>
+        </ol>
+      </div>
+
+      <div class="admin-actions">
+        <button id="btn-preview" class="btn btn-outline" type="button">Vista previa en vivo</button>
+        <button id="btn-save-draft" class="btn btn-outline" type="button">Guardar borrador</button>
+        <button id="btn-download" class="btn btn-primary" type="button">Descargar content.json</button>
+        <button id="btn-reset" class="btn btn-outline" type="button">Restablecer al publicado</button>
+      </div>
+
+      <!-- ============ DATOS GENERALES ============ -->
+      <section class="admin-section">
+        <h2>Datos generales</h2>
+        <p class="hint">Se usan en varias partes del sitio (menú, botón flotante, footer, etc).</p>
+
+        <div class="admin-field-row">
+          <div class="admin-field">
+            <label for="site.logoUrl">Logo del sitio (ruta o URL de imagen)</label>
+            <input type="text" id="site.logoUrl" data-path="site.logoUrl" data-preview="preview-logo" />
+          </div>
+          <img id="preview-logo" class="admin-preview-thumb" alt="Vista previa del logo" />
+        </div>
+
+        <div class="admin-field">
+          <label for="site.whatsappUrl">Link de WhatsApp (formato https://wa.me/56912345678)</label>
+          <input type="text" id="site.whatsappUrl" data-path="site.whatsappUrl" />
+        </div>
+
+        <div class="admin-field">
+          <label for="site.email">Correo de contacto</label>
+          <input type="text" id="site.email" data-path="site.email" />
+        </div>
+      </section>
+
+      <!-- ============ PORTADA / HERO ============ -->
+      <section class="admin-section">
+        <h2>Portada (sección de inicio)</h2>
+        <p class="hint">El texto y la foto grande que aparecen al entrar al sitio.</p>
+
+        <div class="admin-field">
+          <label for="hero.eyebrow">Texto pequeño sobre el título</label>
+          <input type="text" id="hero.eyebrow" data-path="hero.eyebrow" />
+        </div>
+        <div class="admin-field">
+          <label for="hero.titulo">Título principal</label>
+          <input type="text" id="hero.titulo" data-path="hero.titulo" />
+        </div>
+        <div class="admin-field">
+          <label for="hero.bajada">Texto de bajada</label>
+          <textarea id="hero.bajada" data-path="hero.bajada"></textarea>
+        </div>
+        <div class="admin-field-row">
+          <div class="admin-field">
+            <label for="hero.imagenUrl">Foto de portada (ruta o URL de imagen)</label>
+            <input type="text" id="hero.imagenUrl" data-path="hero.imagenUrl" data-preview="preview-hero" />
+          </div>
+          <img id="preview-hero" class="admin-preview-thumb" alt="Vista previa de la foto de portada" />
+        </div>
+      </section>
+
+      <!-- ============ COMPAÑÍAS ============ -->
+      <section class="admin-section">
+        <h2>Compañías aseguradoras</h2>
+        <p class="hint">Logo y los 4 links de cada compañía (pagar, declarar siniestro, PAT/PAC, video y asistencia).</p>
+
+        <!-- Se repite un bloque por cada una de las 6 compañías (índice 0 a 5) -->
+        <details class="company-block" open>
+          <summary><img id="preview-c0" alt="" /> HDI Seguros</summary>
+          <div class="admin-field">
+            <label for="companias.0.nombre">Nombre</label>
+            <input type="text" id="companias.0.nombre" data-path="companias.0.nombre" />
+          </div>
+          <div class="admin-field-row">
+            <div class="admin-field">
+              <label for="companias.0.logoUrl">Logo (ruta o URL)</label>
+              <input type="text" id="companias.0.logoUrl" data-path="companias.0.logoUrl" data-preview="preview-c0" />
+            </div>
+          </div>
+          <div class="grid-2">
+            <div class="admin-field"><label for="companias.0.pagarUrl">Pagar en línea</label><input type="text" id="companias.0.pagarUrl" data-path="companias.0.pagarUrl" /></div>
+            <div class="admin-field"><label for="companias.0.siniestroUrl">Declarar siniestro</label><input type="text" id="companias.0.siniestroUrl" data-path="companias.0.siniestroUrl" /></div>
+            <div class="admin-field"><label for="companias.0.patpacUrl">Inscribir PAT/PAC</label><input type="text" id="companias.0.patpacUrl" data-path="companias.0.patpacUrl" /></div>
+            <div class="admin-field"><label for="companias.0.videoUrl">Video explicativo</label><input type="text" id="companias.0.videoUrl" data-path="companias.0.videoUrl" /></div>
+            <div class="admin-field"><label for="companias.0.asistenciaUrl">Asistencia 24/7</label><input type="text" id="companias.0.asistenciaUrl" data-path="companias.0.asistenciaUrl" /></div>
+          </div>
+        </details>
+
+        <details class="company-block">
+          <summary><img id="preview-c1" alt="" /> Zurich Seguros</summary>
+          <div class="admin-field">
+            <label for="companias.1.nombre">Nombre</label>
+            <input type="text" id="companias.1.nombre" data-path="companias.1.nombre" />
+          </div>
+          <div class="admin-field-row">
+            <div class="admin-field">
+              <label for="companias.1.logoUrl">Logo (ruta o URL)</label>
+              <input type="text" id="companias.1.logoUrl" data-path="companias.1.logoUrl" data-preview="preview-c1" />
+            </div>
+          </div>
+          <div class="grid-2">
+            <div class="admin-field"><label for="companias.1.pagarUrl">Pagar en línea</label><input type="text" id="companias.1.pagarUrl" data-path="companias.1.pagarUrl" /></div>
+            <div class="admin-field"><label for="companias.1.siniestroUrl">Declarar siniestro</label><input type="text" id="companias.1.siniestroUrl" data-path="companias.1.siniestroUrl" /></div>
+            <div class="admin-field"><label for="companias.1.patpacUrl">Inscribir PAT/PAC</label><input type="text" id="companias.1.patpacUrl" data-path="companias.1.patpacUrl" /></div>
+            <div class="admin-field"><label for="companias.1.videoUrl">Video explicativo</label><input type="text" id="companias.1.videoUrl" data-path="companias.1.videoUrl" /></div>
+            <div class="admin-field"><label for="companias.1.asistenciaUrl">Asistencia 24/7</label><input type="text" id="companias.1.asistenciaUrl" data-path="companias.1.asistenciaUrl" /></div>
+          </div>
+        </details>
+
+        <details class="company-block">
+          <summary><img id="preview-c2" alt="" /> BCI Seguros</summary>
+          <div class="admin-field">
+            <label for="companias.2.nombre">Nombre</label>
+            <input type="text" id="companias.2.nombre" data-path="companias.2.nombre" />
+          </div>
+          <div class="admin-field-row">
+            <div class="admin-field">
+              <label for="companias.2.logoUrl">Logo (ruta o URL)</label>
+              <input type="text" id="companias.2.logoUrl" data-path="companias.2.logoUrl" data-preview="preview-c2" />
+            </div>
+          </div>
+          <div class="grid-2">
+            <div class="admin-field"><label for="companias.2.pagarUrl">Pagar en línea</label><input type="text" id="companias.2.pagarUrl" data-path="companias.2.pagarUrl" /></div>
+            <div class="admin-field"><label for="companias.2.siniestroUrl">Declarar siniestro</label><input type="text" id="companias.2.siniestroUrl" data-path="companias.2.siniestroUrl" /></div>
+            <div class="admin-field"><label for="companias.2.patpacUrl">Inscribir PAT/PAC</label><input type="text" id="companias.2.patpacUrl" data-path="companias.2.patpacUrl" /></div>
+            <div class="admin-field"><label for="companias.2.videoUrl">Video explicativo</label><input type="text" id="companias.2.videoUrl" data-path="companias.2.videoUrl" /></div>
+            <div class="admin-field"><label for="companias.2.asistenciaUrl">Asistencia 24/7</label><input type="text" id="companias.2.asistenciaUrl" data-path="companias.2.asistenciaUrl" /></div>
+          </div>
+        </details>
+
+        <details class="company-block">
+          <summary><img id="preview-c3" alt="" /> Chubb Seguros</summary>
+          <div class="admin-field">
+            <label for="companias.3.nombre">Nombre</label>
+            <input type="text" id="companias.3.nombre" data-path="companias.3.nombre" />
+          </div>
+          <div class="admin-field-row">
+            <div class="admin-field">
+              <label for="companias.3.logoUrl">Logo (ruta o URL)</label>
+              <input type="text" id="companias.3.logoUrl" data-path="companias.3.logoUrl" data-preview="preview-c3" />
+            </div>
+          </div>
+          <div class="grid-2">
+            <div class="admin-field"><label for="companias.3.pagarUrl">Pagar en línea</label><input type="text" id="companias.3.pagarUrl" data-path="companias.3.pagarUrl" /></div>
+            <div class="admin-field"><label for="companias.3.siniestroUrl">Declarar siniestro</label><input type="text" id="companias.3.siniestroUrl" data-path="companias.3.siniestroUrl" /></div>
+            <div class="admin-field"><label for="companias.3.patpacUrl">Inscribir PAT/PAC</label><input type="text" id="companias.3.patpacUrl" data-path="companias.3.patpacUrl" /></div>
+            <div class="admin-field"><label for="companias.3.videoUrl">Video explicativo</label><input type="text" id="companias.3.videoUrl" data-path="companias.3.videoUrl" /></div>
+            <div class="admin-field"><label for="companias.3.asistenciaUrl">Asistencia 24/7</label><input type="text" id="companias.3.asistenciaUrl" data-path="companias.3.asistenciaUrl" /></div>
+          </div>
+        </details>
+
+        <details class="company-block">
+          <summary><img id="preview-c4" alt="" /> Consorcio Seguros</summary>
+          <div class="admin-field">
+            <label for="companias.4.nombre">Nombre</label>
+            <input type="text" id="companias.4.nombre" data-path="companias.4.nombre" />
+          </div>
+          <div class="admin-field-row">
+            <div class="admin-field">
+              <label for="companias.4.logoUrl">Logo (ruta o URL)</label>
+              <input type="text" id="companias.4.logoUrl" data-path="companias.4.logoUrl" data-preview="preview-c4" />
+            </div>
+          </div>
+          <div class="grid-2">
+            <div class="admin-field"><label for="companias.4.pagarUrl">Pagar en línea</label><input type="text" id="companias.4.pagarUrl" data-path="companias.4.pagarUrl" /></div>
+            <div class="admin-field"><label for="companias.4.siniestroUrl">Declarar siniestro</label><input type="text" id="companias.4.siniestroUrl" data-path="companias.4.siniestroUrl" /></div>
+            <div class="admin-field"><label for="companias.4.patpacUrl">Inscribir PAT/PAC</label><input type="text" id="companias.4.patpacUrl" data-path="companias.4.patpacUrl" /></div>
+            <div class="admin-field"><label for="companias.4.videoUrl">Video explicativo</label><input type="text" id="companias.4.videoUrl" data-path="companias.4.videoUrl" /></div>
+            <div class="admin-field"><label for="companias.4.asistenciaUrl">Asistencia 24/7</label><input type="text" id="companias.4.asistenciaUrl" data-path="companias.4.asistenciaUrl" /></div>
+          </div>
+        </details>
+
+        <details class="company-block">
+          <summary><img id="preview-c5" alt="" /> Renta Nacional</summary>
+          <div class="admin-field">
+            <label for="companias.5.nombre">Nombre</label>
+            <input type="text" id="companias.5.nombre" data-path="companias.5.nombre" />
+          </div>
+          <div class="admin-field-row">
+            <div class="admin-field">
+              <label for="companias.5.logoUrl">Logo (ruta o URL)</label>
+              <input type="text" id="companias.5.logoUrl" data-path="companias.5.logoUrl" data-preview="preview-c5" />
+            </div>
+          </div>
+          <div class="grid-2">
+            <div class="admin-field"><label for="companias.5.pagarUrl">Pagar en línea</label><input type="text" id="companias.5.pagarUrl" data-path="companias.5.pagarUrl" /></div>
+            <div class="admin-field"><label for="companias.5.siniestroUrl">Declarar siniestro</label><input type="text" id="companias.5.siniestroUrl" data-path="companias.5.siniestroUrl" /></div>
+            <div class="admin-field"><label for="companias.5.patpacUrl">Inscribir PAT/PAC</label><input type="text" id="companias.5.patpacUrl" data-path="companias.5.patpacUrl" /></div>
+            <div class="admin-field"><label for="companias.5.videoUrl">Video explicativo</label><input type="text" id="companias.5.videoUrl" data-path="companias.5.videoUrl" /></div>
+            <div class="admin-field"><label for="companias.5.asistenciaUrl">Asistencia 24/7</label><input type="text" id="companias.5.asistenciaUrl" data-path="companias.5.asistenciaUrl" /></div>
+          </div>
+        </details>
+      </section>
+
+      <p style="font-size:0.8rem; color:var(--color-text-light); text-align:center; margin-top:24px;">
+        Este panel no tiene contraseña ni se conecta a internet salvo para leer/descargar archivos:
+        no lo subas a un lugar público sin protegerlo, y compártelo solo con quien administre el sitio.
+      </p>
+    </main>
+
+    <div id="admin-toast" class="admin-toast"></div>
+
+    <script src="./assets/js/admin.js"></script>
+  </body>
+</html>
