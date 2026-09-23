@@ -20,6 +20,21 @@
       .reduce((acc, key) => (acc && acc[key] !== undefined ? acc[key] : undefined), obj);
   }
 
+  // Esquemas permitidos para href/src que vienen de content.json.
+  // Evita que un valor tipo "javascript:..." termine ejecutándose si en
+  // algún momento ese contenido deja de ser 100% de confianza.
+  const ESQUEMAS_PERMITIDOS = ['http:', 'https:', 'mailto:', 'tel:'];
+
+  function urlEsSegura(valor) {
+    if (valor.startsWith('#') || valor.startsWith('/') || valor.startsWith('./') || valor.startsWith('../')) return true;
+    try {
+      const url = new URL(valor, window.location.href);
+      return ESQUEMAS_PERMITIDOS.includes(url.protocol);
+    } catch (e) {
+      return false;
+    }
+  }
+
   function aplicarValor(el, valor) {
     if (valor === undefined || valor === null) return;
 
@@ -29,14 +44,17 @@
       return;
     }
     if (attrForzado) {
+      if (!urlEsSegura(valor)) return;
       el.setAttribute(attrForzado, valor);
       return;
     }
     if (el.tagName === 'IMG') {
+      if (!urlEsSegura(valor)) return;
       el.setAttribute('src', valor);
       return;
     }
     if (el.tagName === 'A') {
+      if (!urlEsSegura(valor)) return;
       el.setAttribute('href', valor);
       return;
     }
