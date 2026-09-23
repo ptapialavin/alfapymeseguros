@@ -2,12 +2,12 @@
   "site": {
     "logoUrl": "./assets/img/logo-full.svg",
     "whatsappUrl": "https://wa.me/569XXXXXXXX",
-    "email": "contacto@alfapymes.cl"
+    "email": "alfapymes@gmail.com"
   },
   "hero": {
-    "eyebrow": "Alfa Pymes, corredores de seguros",
+    "eyebrow": "Alfapymes, corredores de seguros",
     "titulo": "Los clientes son nuestra prioridad",
-    "bajada": "Cotiza, contrata y gestiona tus pólizas Aquí encontrarás todo lo que necesitas para utilizar tu seguro de forma práctica, útil y fácil. ¡Estamos para ayudarte!",
+    "bajada": "Cotiza, contrata y gestiona tus pólizas. Aquí encontrarás todo lo que necesitas para utilizar tu seguro de forma práctica, útil y fácil. ¡Estamos para ayudarte!",
     "imagenUrl": ""
   },
   "companias": [
@@ -15,55 +15,39 @@
       "nombre": "HDI Seguros",
       "logoUrl": "./assets/img/Logo-HDI-Seguros.png",
       "pagarUrl": "https://pago.hdi.cl/pagosenlinea/",
-      "siniestroUrl": "#",
-      "patpacUrl": "https://pagos.hdi.cl/new-forms/cambio?_gl=1*fgykae*_gcl_au*MTE2ODI0MDk5MS4xNzgzNTE2NDEzLjE3NjY2ODc1NjYuMTc4MzUxNjg5MC4xNzgzNTE3Mzg2&_ga=2.206130650.810657120.1783516413-487255484.1783516413",
-      "videoUrl": "#",
-      "asistenciaUrl": "#"
+      "siniestroUrl": "https://www.hdi.cl/denunciar-siniestro",
+      "patpacUrl": "https://pagos.hdi.cl/new-forms/cambio?_gl=1*fgykae*_gcl_au*MTE2ODI0MDk5MS4xNzgzNTE2NDEzLjE3NjY2ODc1NjYuMTc4MzUxNjg5MC4xNzgzNTE3Mzg2&_ga=2.206130650.810657120.1783516413-487255484.1783516413"
     },
     {
       "nombre": "Zurich Seguros",
       "logoUrl": "./assets/img/Logo-Zurich-Seguros.png",
       "pagarUrl": "https://www9.chilena.cl/vida/web/Portal/pagoexpress/ingreso",
-      "siniestroUrl": "#",
-      "patpacUrl": "#",
-      "videoUrl": "#",
-      "asistenciaUrl": "#"
+      "siniestroUrl": "https://www.zurich.cl/siniestro-denuncia"
     },
     {
       "nombre": "BCI Seguros",
       "logoUrl": "./assets/img/Logo-BCI-Seguros.png",
       "pagarUrl": "https://portalpago.bciseguros.cl/",
-      "siniestroUrl": "#",
-      "patpacUrl": "https://www.bciseguros.cl/especiales/suscribe-o-actualiza-tu-medio-de-pago/",
-      "videoUrl": "#",
-      "asistenciaUrl": "#"
+      "siniestroUrl": "https://www.bciseguros.cl/servicios_en_linea/denuncio-de-siniestros/",
+      "patpacUrl": "https://www.bciseguros.cl/especiales/suscribe-o-actualiza-tu-medio-de-pago/"
     },
     {
       "nombre": "Chubb Seguros",
       "logoUrl": "./assets/img/Logo-Chubb-Seguros.png",
       "pagarUrl": "https://www.chubb.com/cl-es/servicios/pago-en-linea.html",
-      "siniestroUrl": "#",
-      "patpacUrl": "#",
-      "videoUrl": "#",
-      "asistenciaUrl": "#"
+      "siniestroUrl": "https://www.chubb.com/cl-es/siniestros/reporta-un-siniestro.html"
     },
     {
       "nombre": "Consorcio Seguros",
       "logoUrl": "./assets/img/Logo-Consorcio-Seguros.webp",
       "pagarUrl": "https://sitio.consorcio.cl/pagos/",
-      "siniestroUrl": "#",
-      "patpacUrl": "",
-      "videoUrl": "#",
-      "asistenciaUrl": "#"
+      "siniestroUrl": "https://sitio.consorcio.cl/home"
     },
     {
       "nombre": "Renta Nacional",
       "logoUrl": "./assets/img/Logo-Renta-Nacional.jpg",
       "pagarUrl": "https://seguros.rentanacional.cl/pago-en-linea/",
-      "siniestroUrl": "#",
-      "patpacUrl": "",
-      "videoUrl": "#",
-      "asistenciaUrl": "#"
+      "siniestroUrl": "https://seguros.rentanacional.cl/denuncia-de-siniestro/"
     }
   ]
 }

@@ -9,7 +9,7 @@
       name="description"
       content="Corredores de seguros independientes para pymes chilenas. Paga, declara siniestros y gestiona tu póliza en un solo lugar."
     />
-    <meta property="og:title" content="Alfa Pymes | Corredores de Seguros" />
+    <meta property="og:title" content="Alfapymes | Corredores de Seguros" />
     <meta
       property="og:description"
       content="Seguros simples, para que tu pyme siga funcionando."
@@ -43,10 +43,10 @@
     <!-- ============ NAV ============ -->
     <header class="main-header">
       <div class="container nav-container">
-        <a href="#inicio" class="logo" aria-label="Alfa Pymes - Inicio">
+        <a href="#inicio" class="logo" aria-label="Alfapymes - Inicio">
           <img
             src="./assets/img/logo-full.svg"
-            alt="Alfa Pymes - Corredores de Seguros"
+            alt="Alfapymes - Corredores de Seguros"
             class="logo-img"
             data-cms="site.logoUrl"
           />
@@ -57,7 +57,6 @@
           <a href="#servicios">Servicios</a>
           <a href="#companias">Por compañía</a>
           <a href="#cotizar">Cotizar</a>
-          <a href="#nuevos-clientes">Nuevos clientes</a>
           <a href="#preguntas">Preguntas</a>
         </nav>
 
@@ -84,7 +83,7 @@
         <div class="container hero-container">
           <div class="hero-content">
             <p class="eyebrow" data-cms="hero.eyebrow">
-              Alfa Pymes, corredores de seguros
+              Alfapymes, corredores de seguros
             </p>
             <h1 data-cms="hero.titulo">Los clientes son nuestra prioridad</h1>
             <p class="hero-lead" data-cms="hero.bajada">
@@ -120,6 +119,12 @@
                 Sin letra chica
               </li>
             </ul>
+
+            <p class="hero-contact">
+              <span class="material-symbols-outlined" aria-hidden="true">mail</span>
+              Escríbenos a
+              <a href="mailto:alfapymes@gmail.com" class="js-email-link" data-cms="site.email">alfapymes@gmail.com</a>
+            </p>
           </div>
 
           <div class="hero-image">
@@ -166,9 +171,7 @@
               >sync_alt</span
             >
             <h3>Inscripción PAT / PAC</h3>
-            <p>
-              Activa el pago automático de la póliza. Incluye video explicativo.
-            </p>
+            <p>Activa el pago automático de la póliza.</p>
             <span class="service-link"
               >Ver cómo inscribirse
               <span class="material-symbols-outlined" aria-hidden="true"
@@ -176,33 +179,31 @@
               ></span
             >
           </a>
-          <a href="#companias" class="service-card">
+          <a href="#asistencia" class="service-card">
             <span
               class="service-icon icon-c material-symbols-outlined"
               aria-hidden="true"
               >support_agent</span
             >
             <h3>Asistencia en línea</h3>
-            <p>Contacto directo de asistencia para Hogar y Autos.</p>
+            <p>Teléfonos de asistencia de cada compañía para Hogar y Autos.</p>
             <span class="service-link"
-              >Ver contactos
+              >Ver teléfonos
               <span class="material-symbols-outlined" aria-hidden="true"
                 >arrow_forward</span
               ></span
             >
           </a>
-          <a href="#companias" class="service-card">
+          <a href="#faq-gps" class="service-card">
             <span
               class="service-icon icon-d material-symbols-outlined"
               aria-hidden="true"
               >gps_fixed</span
             >
-            <h3>Contratación del GPS</h3>
-            <p>
-              Contrata el servicio de GPS para tu vehículo según la compañía.
-            </p>
+            <h3>GPS del vehículo</h3>
+            <p>Entérate cómo funciona el GPS de tu seguro de vehículo.</p>
             <span class="service-link"
-              >Ver opciones
+              >Ver información
               <span class="material-symbols-outlined" aria-hidden="true"
                 >arrow_forward</span
               ></span
@@ -289,386 +290,108 @@
 
           <div class="companies-layout">
             <div class="grid-companies">
-              <!-- Cada compañía se abre y muestra sus 4 accesos, en vez de repetir 4 listados separados -->
               <details class="company-card">
                 <summary>
-                  <img
-                    src="./assets/img/Logo-HDI-Seguros.png"
-                    alt="HDI Seguros"
-                    class="company-logo"
-                    data-cms="companias.0.logoUrl"
-                  />
-                  <span class="company-name" data-cms="companias.0.nombre"
-                    >HDI Seguros</span
-                  >
-                  <span
-                    class="material-symbols-outlined chevron"
-                    aria-hidden="true"
-                    >expand_more</span
-                  >
+                  <img src="./assets/img/Logo-HDI-Seguros.png" alt="HDI Seguros" class="company-logo" data-cms="companias.0.logoUrl" />
+                  <span class="company-name" data-cms="companias.0.nombre">HDI Seguros</span>
+                  <span class="material-symbols-outlined chevron" aria-hidden="true">expand_more</span>
                 </summary>
                 <ul class="company-links">
-                  <li>
-                    <a
-                      href="https://pago.hdi.cl/pagosenlinea/"
-                      data-cms="companias.0.pagarUrl"
-                      >Pagar en línea
-                      <span class="material-symbols-outlined" aria-hidden="true"
-                        >north_east</span
-                      ></a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" data-cms="companias.0.siniestroUrl"
-                      >Declarar siniestro
-                      <span class="material-symbols-outlined" aria-hidden="true"
-                        >north_east</span
-                      ></a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://pagos.hdi.cl/new-forms/cambio?_gl=1*fgykae*_gcl_au*MTE2ODI0MDk5MS4xNzgzNTE2NDEzLjE3NjY2ODc1NjYuMTc4MzUxNjg5MC4xNzgzNTE3Mzg2&_ga=2.206130650.810657120.1783516413-487255484.1783516413"
-                      data-cms="companias.0.patpacUrl"
-                      >Inscribir PAT/PAC
-                      <span class="material-symbols-outlined" aria-hidden="true"
-                        >north_east</span
-                      ></a
-                    >
-                    <a
-                      href="#"
-                      class="link-video"
-                      data-cms="companias.0.videoUrl"
-                      >Ver video <span class="tag-video">+ video</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" data-cms="companias.0.asistenciaUrl"
-                      >Asistencia 24/7
-                      <span class="material-symbols-outlined" aria-hidden="true"
-                        >north_east</span
-                      ></a
-                    >
-                  </li>
+                  <li><a href="https://pago.hdi.cl/pagosenlinea/" target="_blank" rel="noopener noreferrer" data-cms="companias.0.pagarUrl"
+                      >Pagar en línea <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a
+                    ></li>
+                  <li><a href="https://www.hdi.cl/denunciar-siniestro" target="_blank" rel="noopener noreferrer" data-cms="companias.0.siniestroUrl"
+                      >Declarar siniestro <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a
+                    ></li>
+                  <li><a href="https://pagos.hdi.cl/new-forms/cambio?_gl=1*fgykae*_gcl_au*MTE2ODI0MDk5MS4xNzgzNTE2NDEzLjE3NjY2ODc1NjYuMTc4MzUxNjg5MC4xNzgzNTE3Mzg2&_ga=2.206130650.810657120.1783516413-487255484.1783516413" target="_blank" rel="noopener noreferrer" data-cms="companias.0.patpacUrl"
+                      >Inscribir PAT/PAC <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a
+                    ></li>
+                  <li><a href="#asistencia-hdi">Teléfonos de asistencia <span class="material-symbols-outlined" aria-hidden="true">call</span></a></li>
                 </ul>
               </details>
               <details class="company-card">
                 <summary>
-                  <img
-                    src="./assets/img/Logo-Zurich-Seguros.png"
-                    alt="Zurich Seguros"
-                    class="company-logo"
-                    data-cms="companias.1.logoUrl"
-                  />
-                  <span class="company-name" data-cms="companias.1.nombre"
-                    >Zurich Seguros</span
-                  >
-                  <span
-                    class="material-symbols-outlined chevron"
-                    aria-hidden="true"
-                    >expand_more</span
-                  >
+                  <img src="./assets/img/Logo-Zurich-Seguros.png" alt="Zurich Seguros" class="company-logo" data-cms="companias.1.logoUrl" />
+                  <span class="company-name" data-cms="companias.1.nombre">Zurich Seguros</span>
+                  <span class="material-symbols-outlined chevron" aria-hidden="true">expand_more</span>
                 </summary>
                 <ul class="company-links">
-                  <li>
-                    <a
-                      href="https://www9.chilena.cl/vida/web/Portal/pagoexpress/ingreso "
-                      data-cms="companias.1.pagarUrl"
-                      >Pagar en línea
-                      <span class="material-symbols-outlined" aria-hidden="true"
-                        >north_east</span
-                      ></a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" data-cms="companias.1.siniestroUrl"
-                      >Declarar siniestro
-                      <span class="material-symbols-outlined" aria-hidden="true"
-                        >north_east</span
-                      ></a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" data-cms="companias.1.patpacUrl"
-                      >Inscribir PAT/PAC
-                      <span class="material-symbols-outlined" aria-hidden="true"
-                        >north_east</span
-                      ></a
-                    >
-                    <a
-                      href="#"
-                      class="link-video"
-                      data-cms="companias.1.videoUrl"
-                      >Ver video <span class="tag-video">+ video</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" data-cms="companias.1.asistenciaUrl"
-                      >Asistencia 24/7
-                      <span class="material-symbols-outlined" aria-hidden="true"
-                        >north_east</span
-                      ></a
-                    >
-                  </li>
+                  <li><a href="https://www9.chilena.cl/vida/web/Portal/pagoexpress/ingreso" target="_blank" rel="noopener noreferrer" data-cms="companias.1.pagarUrl"
+                      >Pagar en línea <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a
+                    ></li>
+                  <li><a href="https://www.zurich.cl/siniestro-denuncia" target="_blank" rel="noopener noreferrer" data-cms="companias.1.siniestroUrl"
+                      >Declarar siniestro <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a
+                    ></li>
+                  <li><a href="#asistencia-zurich">Teléfonos de asistencia <span class="material-symbols-outlined" aria-hidden="true">call</span></a></li>
                 </ul>
               </details>
               <details class="company-card">
                 <summary>
-                  <img
-                    src="./assets/img/Logo-BCI-Seguros.png"
-                    alt="BCI Seguros"
-                    class="company-logo"
-                    data-cms="companias.2.logoUrl"
-                  />
-                  <span class="company-name" data-cms="companias.2.nombre"
-                    >BCI Seguros</span
-                  >
-                  <span
-                    class="material-symbols-outlined chevron"
-                    aria-hidden="true"
-                    >expand_more</span
-                  >
+                  <img src="./assets/img/Logo-BCI-Seguros.png" alt="BCI Seguros" class="company-logo" data-cms="companias.2.logoUrl" />
+                  <span class="company-name" data-cms="companias.2.nombre">BCI Seguros</span>
+                  <span class="material-symbols-outlined chevron" aria-hidden="true">expand_more</span>
                 </summary>
                 <ul class="company-links">
-                  <li>
-                    <a
-                      href="https://portalpago.bciseguros.cl/"
-                      data-cms="companias.2.pagarUrl"
-                      >Pagar en línea
-                      <span class="material-symbols-outlined" aria-hidden="true"
-                        >north_east</span
-                      ></a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" data-cms="companias.2.siniestroUrl"
-                      >Declarar siniestro
-                      <span class="material-symbols-outlined" aria-hidden="true"
-                        >north_east</span
-                      ></a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.bciseguros.cl/especiales/suscribe-o-actualiza-tu-medio-de-pago/"
-                      data-cms="companias.2.patpacUrl"
-                      >Inscribir PAT/PAC
-                      <span class="material-symbols-outlined" aria-hidden="true"
-                        >north_east</span
-                      ></a
-                    >
-                    <a
-                      href="#"
-                      class="link-video"
-                      data-cms="companias.2.videoUrl"
-                      >Ver video <span class="tag-video">+ video</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" data-cms="companias.2.asistenciaUrl"
-                      >Asistencia 24/7
-                      <span class="material-symbols-outlined" aria-hidden="true"
-                        >north_east</span
-                      ></a
-                    >
-                  </li>
+                  <li><a href="https://portalpago.bciseguros.cl/" target="_blank" rel="noopener noreferrer" data-cms="companias.2.pagarUrl"
+                      >Pagar en línea <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a
+                    ></li>
+                  <li><a href="https://www.bciseguros.cl/servicios_en_linea/denuncio-de-siniestros/" target="_blank" rel="noopener noreferrer" data-cms="companias.2.siniestroUrl"
+                      >Declarar siniestro <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a
+                    ></li>
+                  <li><a href="https://www.bciseguros.cl/especiales/suscribe-o-actualiza-tu-medio-de-pago/" target="_blank" rel="noopener noreferrer" data-cms="companias.2.patpacUrl"
+                      >Inscribir PAT/PAC <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a
+                    ></li>
+                  <li><a href="#asistencia-bci">Teléfonos de asistencia <span class="material-symbols-outlined" aria-hidden="true">call</span></a></li>
                 </ul>
               </details>
               <details class="company-card">
                 <summary>
-                  <img
-                    src="./assets/img/Logo-Chubb-Seguros.png"
-                    alt="Chubb Seguros"
-                    class="company-logo"
-                    data-cms="companias.3.logoUrl"
-                  />
-                  <span class="company-name" data-cms="companias.3.nombre"
-                    >Chubb Seguros</span
-                  >
-                  <span
-                    class="material-symbols-outlined chevron"
-                    aria-hidden="true"
-                    >expand_more</span
-                  >
+                  <img src="./assets/img/Logo-Chubb-Seguros.png" alt="Chubb Seguros" class="company-logo" data-cms="companias.3.logoUrl" />
+                  <span class="company-name" data-cms="companias.3.nombre">Chubb Seguros</span>
+                  <span class="material-symbols-outlined chevron" aria-hidden="true">expand_more</span>
                 </summary>
                 <ul class="company-links">
-                  <li>
-                    <a
-                      href="https://www.chubb.com/cl-es/servicios/pago-en-linea.html"
-                      data-cms="companias.3.pagarUrl"
-                      >Pagar en línea
-                      <span class="material-symbols-outlined" aria-hidden="true"
-                        >north_east</span
-                      ></a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" data-cms="companias.3.siniestroUrl"
-                      >Declarar siniestro
-                      <span class="material-symbols-outlined" aria-hidden="true"
-                        >north_east</span
-                      ></a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" data-cms="companias.3.patpacUrl"
-                      >Inscribir PAT/PAC
-                      <span class="material-symbols-outlined" aria-hidden="true"
-                        >north_east</span
-                      ></a
-                    >
-                    <a
-                      href="#"
-                      class="link-video"
-                      data-cms="companias.3.videoUrl"
-                      >Ver video <span class="tag-video">+ video</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" data-cms="companias.3.asistenciaUrl"
-                      >Asistencia 24/7
-                      <span class="material-symbols-outlined" aria-hidden="true"
-                        >north_east</span
-                      ></a
-                    >
-                  </li>
+                  <li><a href="https://www.chubb.com/cl-es/servicios/pago-en-linea.html" target="_blank" rel="noopener noreferrer" data-cms="companias.3.pagarUrl"
+                      >Pagar en línea <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a
+                    ></li>
+                  <li><a href="https://www.chubb.com/cl-es/siniestros/reporta-un-siniestro.html" target="_blank" rel="noopener noreferrer" data-cms="companias.3.siniestroUrl"
+                      >Declarar siniestro <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a
+                    ></li>
+                  <li><a href="#asistencia-chubb">Teléfonos de asistencia <span class="material-symbols-outlined" aria-hidden="true">call</span></a></li>
                 </ul>
               </details>
               <details class="company-card">
                 <summary>
-                  <img
-                    src="./assets/img/Logo-Consorcio-Seguros.webp"
-                    alt="Consorcio Seguros"
-                    class="company-logo"
-                    data-cms="companias.4.logoUrl"
-                  />
-                  <span class="company-name" data-cms="companias.4.nombre"
-                    >Consorcio Seguros</span
-                  >
-                  <span
-                    class="material-symbols-outlined chevron"
-                    aria-hidden="true"
-                    >expand_more</span
-                  >
+                  <img src="./assets/img/Logo-Consorcio-Seguros.webp" alt="Consorcio Seguros" class="company-logo" data-cms="companias.4.logoUrl" />
+                  <span class="company-name" data-cms="companias.4.nombre">Consorcio Seguros</span>
+                  <span class="material-symbols-outlined chevron" aria-hidden="true">expand_more</span>
                 </summary>
                 <ul class="company-links">
-                  <li>
-                    <a
-                      href="https://sitio.consorcio.cl/pagos/"
-                      data-cms="companias.4.pagarUrl"
-                      >Pagar en línea
-                      <span class="material-symbols-outlined" aria-hidden="true"
-                        >north_east</span
-                      ></a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" data-cms="companias.4.siniestroUrl"
-                      >Declarar siniestro
-                      <span class="material-symbols-outlined" aria-hidden="true"
-                        >north_east</span
-                      ></a
-                    >
-                  </li>
-                  <li>
-                    <a href="" data-cms="companias.4.patpacUrl"
-                      >Inscribir PAT/PAC
-                      <span class="material-symbols-outlined" aria-hidden="true"
-                        >north_east</span
-                      ></a
-                    >
-                    <a
-                      href="#"
-                      class="link-video"
-                      data-cms="companias.4.videoUrl"
-                      >Ver video <span class="tag-video">+ video</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" data-cms="companias.4.asistenciaUrl"
-                      >Asistencia 24/7
-                      <span class="material-symbols-outlined" aria-hidden="true"
-                        >north_east</span
-                      ></a
-                    >
-                  </li>
+                  <li><a href="https://sitio.consorcio.cl/pagos/" target="_blank" rel="noopener noreferrer" data-cms="companias.4.pagarUrl"
+                      >Pagar en línea <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a
+                    ></li>
+                  <li><a href="https://sitio.consorcio.cl/home" target="_blank" rel="noopener noreferrer" data-cms="companias.4.siniestroUrl"
+                      >Declarar siniestro <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a
+                    ></li>
+                  <li><a href="#asistencia-consorcio">Teléfonos de asistencia <span class="material-symbols-outlined" aria-hidden="true">call</span></a></li>
                 </ul>
               </details>
               <details class="company-card">
                 <summary>
-                  <img
-                    src="./assets/img/Logo-Renta-Nacional.jpg"
-                    alt="Renta Nacional"
-                    class="company-logo"
-                    data-cms="companias.5.logoUrl"
-                  />
-                  <span class="company-name" data-cms="companias.5.nombre"
-                    >Renta Nacional</span
-                  >
-                  <span
-                    class="material-symbols-outlined chevron"
-                    aria-hidden="true"
-                    >expand_more</span
-                  >
+                  <img src="./assets/img/Logo-Renta-Nacional.jpg" alt="Renta Nacional" class="company-logo" data-cms="companias.5.logoUrl" />
+                  <span class="company-name" data-cms="companias.5.nombre">Renta Nacional</span>
+                  <span class="material-symbols-outlined chevron" aria-hidden="true">expand_more</span>
                 </summary>
                 <ul class="company-links">
-                  <li>
-                    <a
-                      href="https://seguros.rentanacional.cl/pago-en-linea/ "
-                      data-cms="companias.5.pagarUrl"
-                      >Pagar en línea
-                      <span class="material-symbols-outlined" aria-hidden="true"
-                        >north_east</span
-                      ></a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" data-cms="companias.5.siniestroUrl"
-                      >Declarar siniestro
-                      <span class="material-symbols-outlined" aria-hidden="true"
-                        >north_east</span
-                      ></a
-                    >
-                  </li>
-                  <li>
-                    <a href="" data-cms="companias.5.patpacUrl"
-                      >Inscribir PAT/PAC
-                      <span class="material-symbols-outlined" aria-hidden="true"
-                        >north_east</span
-                      ></a
-                    >
-                    <a
-                      href="#"
-                      class="link-video"
-                      data-cms="companias.5.videoUrl"
-                      >Ver video <span class="tag-video">+ video</span></a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" data-cms="companias.5.asistenciaUrl"
-                      >Asistencia 24/7
-                      <span class="material-symbols-outlined" aria-hidden="true"
-                        >north_east</span
-                      ></a
-                    >
-                  </li>
+                  <li><a href="https://seguros.rentanacional.cl/pago-en-linea/" target="_blank" rel="noopener noreferrer" data-cms="companias.5.pagarUrl"
+                      >Pagar en línea <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a
+                    ></li>
+                  <li><a href="https://seguros.rentanacional.cl/denuncia-de-siniestro/" target="_blank" rel="noopener noreferrer" data-cms="companias.5.siniestroUrl"
+                      >Declarar siniestro <span class="material-symbols-outlined" aria-hidden="true">north_east</span></a
+                    ></li>
+                  <li><a href="#asistencia-renta">Teléfonos de asistencia <span class="material-symbols-outlined" aria-hidden="true">call</span></a></li>
                 </ul>
               </details>
-            </div>
-
-            <!-- Contenido único que no se repite en ningún otro bloque: el video explicativo -->
-            <div class="video-card">
-              <button
-                class="play-btn"
-                type="button"
-                aria-label="Reproducir video explicativo"
-              >
-                <span class="material-symbols-outlined" aria-hidden="true"
-                  >play_arrow</span
-                >
-              </button>
-              <h3>Video explicativo general</h3>
-              <p>Cómo funciona el PAT/PAC, en menos de 3 minutos.</p>
             </div>
           </div>
 
@@ -676,6 +399,68 @@
             ¿Un link no funciona? Pasa esto con los portales de las compañías —
             escríbenos por WhatsApp y lo resolvemos directo.
           </p>
+        </div>
+      </section>
+
+      <!-- ============ ASISTENCIAS HOGAR Y VEHÍCULO ============ -->
+      <section id="asistencia" class="asistencia-section container">
+        <p class="eyebrow eyebrow-center">Asistencia</p>
+        <h2 class="section-title">Asistencias Hogar y Vehículo</h2>
+        <p class="section-lead">
+          Teléfonos de asistencia de cada compañía. Toca el número para llamar
+          desde tu celular.
+        </p>
+        <div class="asistencia-grid">
+          <article class="asistencia-card" id="asistencia-hdi">
+            <header>
+              <img src="./assets/img/Logo-HDI-Seguros.png" alt="" class="company-logo" />
+              <h3>HDI Seguros</h3>
+            </header>
+            <p>Llama al <a href="tel:6006006010" class="phone">600 600 6010</a>, opción 1.</p>
+              <p>La primera asistencia que ofrece es vehicular. Si tienes otro tipo de requerimiento, espera hasta el final del audio de la operadora.</p>
+          </article>
+          <article class="asistencia-card" id="asistencia-zurich">
+            <header>
+              <img src="./assets/img/Logo-Zurich-Seguros.png" alt="" class="company-logo" />
+              <h3>Zurich Seguros</h3>
+            </header>
+            <p>Call Center: <a href="tel:6006009090" class="phone">600 600 9090</a> (lunes a viernes de 8:00 a 21:00 horas).</p>
+              <p>WhatsApp: <a href="https://wa.me/56987902551" target="_blank" rel="noopener noreferrer" class="phone">+56 9 8790 2551</a>. Atención las 24 horas, de lunes a domingo, excepto feriados.</p>
+              <p>En caso de dudas, contáctanos al <a href="https://wa.me/569XXXXXXXX" data-cms="site.whatsappUrl" target="_blank" rel="noopener noreferrer">WhatsApp de Alfapymes</a>.</p>
+          </article>
+          <article class="asistencia-card" id="asistencia-bci">
+            <header>
+              <img src="./assets/img/Logo-BCI-Seguros.png" alt="" class="company-logo" />
+              <h3>BCI Seguros</h3>
+            </header>
+            <p><strong>Vehículo</strong> (nacional e internacional): <a href="tel:+56228261101" class="phone">+56 2 2826 1101</a>. Puedes solicitar cobro revertido.</p>
+              <p><strong>Hogar:</strong> <a href="tel:+56227976103" class="phone">+56 2 2797 6103</a> o <a href="tel:+56228261101" class="phone">+56 2 2826 1101</a>.</p>
+              <p>Te atenderá una operadora directamente, que podrá guiarte en tu asistencia.</p>
+          </article>
+          <article class="asistencia-card" id="asistencia-chubb">
+            <header>
+              <img src="./assets/img/Logo-Chubb-Seguros.png" alt="" class="company-logo" />
+              <h3>Chubb Seguros</h3>
+            </header>
+            <p>Teléfono de contacto: <a href="tel:800800068" class="phone">800 800 068</a>.</p>
+              <p>Atención de lunes a viernes de 9:00 a 18:30 horas.</p>
+          </article>
+          <article class="asistencia-card" id="asistencia-consorcio">
+            <header>
+              <img src="./assets/img/Logo-Consorcio-Seguros.webp" alt="" class="company-logo" />
+              <h3>Consorcio Seguros</h3>
+            </header>
+            <p><strong>Vehículo:</strong> <a href="tel:+56222665407" class="phone">+56 2 2266 5407</a>, opción 2, o solicita en línea <a href="https://dconsorcio.racasistencia.cl/" target="_blank" rel="noopener noreferrer">aquí</a>.</p>
+              <p><strong>Hogar:</strong> <a href="tel:+56229418978" class="phone">+56 2 2941 8978</a>.</p>
+          </article>
+          <article class="asistencia-card" id="asistencia-renta">
+            <header>
+              <img src="./assets/img/Logo-Renta-Nacional.jpg" alt="" class="company-logo" />
+              <h3>Renta Nacional</h3>
+            </header>
+            <p>Teléfono: <a href="tel:+56226700202" class="phone">+56 2 2670 0202</a>. La llamada es gratuita desde celulares o fuera del país.</p>
+              <p>Marca la opción 2 y luego la opción 1.</p>
+          </article>
         </div>
       </section>
 
@@ -721,11 +506,11 @@
             >
             <h3>Hogar</h3>
             <p>Incendio, robo, sismo y responsabilidad civil.</p>
-            <a
-              href="#inicio"
-              class="btn btn-primary btn-block js-cotizar-ramo"
-              data-ramo="hogar"
-              >Cotizar Hogar</a
+            <button
+              type="button"
+              class="btn btn-primary btn-block"
+              data-form="hogar"
+              >Cotizar Hogar</button
             >
           </div>
           <div class="ramo-card">
@@ -734,11 +519,11 @@
             >
             <h3>Autos</h3>
             <p>Todo riesgo, daños a terceros y asistencia en ruta.</p>
-            <a
-              href="#inicio"
-              class="btn btn-primary btn-block js-cotizar-ramo"
-              data-ramo="autos"
-              >Cotizar Autos</a
+            <button
+              type="button"
+              class="btn btn-primary btn-block"
+              data-form="autos"
+              >Cotizar Autos</button
             >
           </div>
           <div class="ramo-card">
@@ -747,11 +532,11 @@
             >
             <h3>Pymes</h3>
             <p>Protección para tu local, equipo y continuidad operativa.</p>
-            <a
-              href="#inicio"
-              class="btn btn-primary btn-block js-cotizar-ramo"
-              data-ramo="pymes"
-              >Cotizar Pymes</a
+            <button
+              type="button"
+              class="btn btn-primary btn-block"
+              data-form="pymes"
+              >Cotizar Pymes</button
             >
           </div>
         </div>
@@ -857,45 +642,12 @@
             >check_circle</span
           >
           <h3>Solicitud enviada</h3>
-          <p>
+          <p id="inspection-success-text">
             Un ejecutivo se pondrá en contacto para agendar la visita técnica.
           </p>
           <button type="button" class="btn btn-outline" id="btn-otra-solicitud">
             Enviar otra solicitud
           </button>
-        </div>
-      </section>
-
-      <!-- ============ NUEVOS CLIENTES ============ -->
-      <section id="nuevos-clientes" class="new-clients-section container">
-        <p class="eyebrow eyebrow-center">Nuevos clientes</p>
-        <h2 class="section-title">Empezar es simple</h2>
-
-        <div class="grid-steps">
-          <div class="step-card">
-            <span class="step-number">1</span>
-            <h3>Cotiza</h3>
-            <p>Pide el valor de tu seguro ideal según tus necesidades.</p>
-          </div>
-          <div class="step-card">
-            <span class="step-number">2</span>
-            <h3>Compara</h3>
-            <p>Te mostramos opciones de varias compañías.</p>
-          </div>
-          <div class="step-card">
-            <span class="step-number">3</span>
-            <h3>Contrata</h3>
-            <p>Firma en digital, sin papeleo.</p>
-          </div>
-          <div class="step-card">
-            <span class="step-number">4</span>
-            <h3>Te acompañamos</h3>
-            <p>Asistencia y soporte para toda tu póliza.</p>
-          </div>
-        </div>
-
-        <div class="new-clients-cta">
-          <a href="#cotizar" class="btn btn-primary">Cotizar ahora</a>
         </div>
       </section>
 
@@ -909,9 +661,9 @@
               seguro correcto.
             </h2>
             <p>
-              Somos corredores independientes: comparamos entre distintas
+              Somos corredores independientes. Comparamos entre distintas
               compañías para encontrar la póliza que mejor se ajusta a tu
-              presupuesto y necesidad real — no la que más nos convenga vender.
+              presupuesto.
             </p>
             <a href="#servicios" class="btn btn-outline"
               >Ver todos los servicios</a
@@ -920,7 +672,7 @@
 
           <div class="stats-card">
             <div class="stat">
-              <span class="stat-number">5</span
+              <span class="stat-number">6</span
               ><span class="stat-label">Compañías aseguradoras aliadas</span>
             </div>
             <div class="stat">
@@ -948,31 +700,61 @@
           <details class="faq-item">
             <summary>¿Cómo declaro un siniestro?</summary>
             <p>
-              Contacta directamente con tu compañía desde la sección "Acceso
-              directo por compañía". Si tienes problemas, escríbenos por
-              WhatsApp y te acompañamos en la gestión.
+              Hazlo directamente desde la sección
+              <a href="#companias">Acceso directo por compañía</a>, en el link
+              "Declarar siniestro". Si tienes problemas, escríbenos por WhatsApp
+              y te acompañamos en la gestión.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>¿Sirve mi seguro de vehículo (u otro) si el propietario cambia?</summary>
+            <p>
+              Los seguros de bienes, de cualquier tipo, solo cubren al asegurado
+              o beneficiarios, quienes son los propietarios. En caso de que este
+              cambie, por venta o traspaso, y haya un siniestro, la compañía NO
+              pagará. En el caso de seguros de vida o salud, el mecanismo es
+              distinto.
             </p>
           </details>
           <details class="faq-item">
             <summary>¿Qué es el PAT/PAC y por qué me conviene?</summary>
             <p>
-              Es el pago automático de tu póliza, con cargo a tu cuenta o
-              tarjeta. Evita atrasos y la posible pérdida de cobertura por no
+              Es el pago automático de tu póliza, con cargo a tu cuenta corriente
+              (PAC) o tarjeta de crédito (PAT). Generalmente, los precios
+              pactados con este tipo de pago son más bajos que con aviso de
+              cobranza o pago mensual en línea, en el sitio de pago de cada
+              compañía o directo en sucursal. El pago PAT o PAC es más seguro, ya
+              que se evitan atrasos y la posible pérdida de cobertura por no
               pago.
             </p>
           </details>
           <details class="faq-item">
             <summary>¿Puedo cotizar sin comprometerme a contratar?</summary>
             <p>
-              Sí, cotizar no tiene costo ni compromiso. Te mostramos opciones y
-              decides cuándo (o si) contratar.
+              Te asesoramos sin costo ni compromiso. Te mostramos las mejores
+              opciones frente a la competencia. Si ésta nos llegara a superar, te
+              recomendamos lo que realmente es lo mejor para ti. ¡Tú decides!
             </p>
           </details>
           <details class="faq-item">
-            <summary>¿Un link de mi compañía no funciona, qué hago?</summary>
+            <summary>Si tengo otro tipo de duda… ¿puedo contactarlos?</summary>
             <p>
-              Escríbenos por WhatsApp y te ayudamos a resolverlo directamente,
-              sin que tengas que perder tiempo con la compañía.
+              El mundo de los seguros resulta ser confuso y muchas veces
+              engorroso. La asesoría que ofrecemos es completa y sin costo.
+              Escríbenos por WhatsApp y te ayudamos a resolver directamente, sin
+              que tengas que perder tiempo contactando a la compañía mediante
+              formularios y correos que nunca se responden.
+            </p>
+          </details>
+          <details class="faq-item" id="faq-gps">
+            <summary>¿Cómo funciona el tema "GPS"?</summary>
+            <p>
+              El GPS es un equipo que la compañía debe entregar gratuitamente por
+              ley al contratar un seguro de vehículo; sin embargo, el servicio
+              del GPS NO es gratuito y debe ser pagado por el asegurado según los
+              distintos planes ofrecidos por empresas externas asociadas. Si no
+              recibes el dispositivo en los días posteriores a la contratación,
+              debes solicitarlo a tu corredor o directamente a la aseguradora.
             </p>
           </details>
         </div>
@@ -986,11 +768,11 @@
           <a
             href="#inicio"
             class="logo footer-logo"
-            aria-label="Alfa Pymes - Inicio"
+            aria-label="Alfapymes - Inicio"
           >
             <img
               src="./assets/img/logo-full-light.svg"
-              alt="Alfa Pymes - Corredores de Seguros"
+              alt="Alfapymes - Corredores de Seguros"
               class="logo-img"
             />
           </a>
@@ -1006,12 +788,18 @@
           <a href="#companias">Inscripción PAT/PAC</a>
           <a href="#cotizar">Cotización</a>
           <a href="#companias">Declarar siniestro</a>
+          <a
+            href="https://www.cmfchile.cl/"
+            class="footer-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+            >CMF</a
+          >
         </div>
 
         <div class="footer-col">
           <h4>Empresa</h4>
           <a href="#quienes-somos">Quiénes somos</a>
-          <a href="#nuevos-clientes">Nuevos clientes</a>
           <a href="#preguntas">Preguntas frecuentes</a>
         </div>
 
@@ -1025,18 +813,18 @@
             >WhatsApp</a
           >
           <a
-            href="mailto:contacto@alfapymes.cl"
+            href="mailto:alfapymes@gmail.com"
             class="js-email-link"
             data-cms="site.email"
-            >contacto@alfapymes.cl</a
+            >alfapymes@gmail.com</a
           >
-          <a href="#contacto">Formulario de contacto</a>
+          <a href="#contacto" data-form="contacto">Formulario de contacto</a>
         </div>
       </div>
 
       <div class="container footer-bottom">
         <p>
-          &copy; 2026 Alfa Pymes Corredores de Seguros. Todos los derechos
+          &copy; 2026 Alfapymes Corredores de Seguros. Todos los derechos
           reservados.
         </p>
         <p>Santiago, Chile</p>
@@ -1060,6 +848,27 @@
       </svg>
       <span class="whatsapp-tooltip">Conversar</span>
     </a>
+
+    <!-- ============ MODAL DE FORMULARIOS (cotización y contacto) ============ -->
+    <dialog id="form-modal" class="form-modal" aria-labelledby="form-modal-title">
+      <div class="form-modal-head">
+        <h2 id="form-modal-title"></h2>
+        <button type="button" class="form-modal-close" id="form-modal-close" aria-label="Cerrar formulario">
+          <span class="material-symbols-outlined" aria-hidden="true">close</span>
+        </button>
+      </div>
+      <p class="form-modal-lead" id="form-modal-lead"></p>
+      <form id="modal-form" novalidate>
+        <div class="form-grid" id="modal-form-fields"></div>
+        <button type="submit" class="btn btn-primary btn-block" id="modal-form-submit">Enviar solicitud</button>
+      </form>
+      <div class="form-success form-success-modal" id="modal-form-success" hidden>
+        <span class="material-symbols-outlined" aria-hidden="true">check_circle</span>
+        <h3>Solicitud lista</h3>
+        <p id="modal-form-success-text"></p>
+        <button type="button" class="btn btn-outline" id="modal-form-done">Cerrar</button>
+      </div>
+    </dialog>
 
     <script src="./assets/js/content-loader.js"></script>
     <script src="./assets/js/script.js"></script>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Panel de edición — Alfa Pymes</title>
+    <title>Panel de edición — Alfapymes</title>
     <meta name="robots" content="noindex, nofollow" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,7 +19,7 @@
     <header class="admin-header">
       <div class="container admin-header-inner">
         <div style="display:flex; align-items:center; gap:12px;">
-          <img src="./assets/img/logo-full.svg" alt="Alfa Pymes" class="logo-img" />
+          <img src="./assets/img/logo-full.svg" alt="Alfapymes" class="logo-img" />
           <div>
             <h1>Panel de edición del sitio</h1>
             <p>Fotos, imágenes, links y secciones — sin tocar código</p>
@@ -100,9 +100,9 @@
       <!-- ============ COMPAÑÍAS ============ -->
       <section class="admin-section">
         <h2>Compañías aseguradoras</h2>
-        <p class="hint">Logo y los 4 links de cada compañía (pagar, declarar siniestro, PAT/PAC, video y asistencia).</p>
+        <p class="hint">Logo y links de cada compañía (pagar, declarar siniestro y, en HDI y BCI, inscribir PAT/PAC).</p>
 
-        <!-- Se repite un bloque por cada una de las 6 compañías (índice 0 a 5) -->
+        <!-- Un bloque por compañía (índice 0 a 5). PAT/PAC solo existe para HDI y BCI. -->
         <details class="company-block" open>
           <summary><img id="preview-c0" alt="" /> HDI Seguros</summary>
           <div class="admin-field">
@@ -119,8 +119,6 @@
             <div class="admin-field"><label for="companias.0.pagarUrl">Pagar en línea</label><input type="text" id="companias.0.pagarUrl" data-path="companias.0.pagarUrl" /></div>
             <div class="admin-field"><label for="companias.0.siniestroUrl">Declarar siniestro</label><input type="text" id="companias.0.siniestroUrl" data-path="companias.0.siniestroUrl" /></div>
             <div class="admin-field"><label for="companias.0.patpacUrl">Inscribir PAT/PAC</label><input type="text" id="companias.0.patpacUrl" data-path="companias.0.patpacUrl" /></div>
-            <div class="admin-field"><label for="companias.0.videoUrl">Video explicativo</label><input type="text" id="companias.0.videoUrl" data-path="companias.0.videoUrl" /></div>
-            <div class="admin-field"><label for="companias.0.asistenciaUrl">Asistencia 24/7</label><input type="text" id="companias.0.asistenciaUrl" data-path="companias.0.asistenciaUrl" /></div>
           </div>
         </details>
 
@@ -139,9 +137,6 @@
           <div class="grid-2">
             <div class="admin-field"><label for="companias.1.pagarUrl">Pagar en línea</label><input type="text" id="companias.1.pagarUrl" data-path="companias.1.pagarUrl" /></div>
             <div class="admin-field"><label for="companias.1.siniestroUrl">Declarar siniestro</label><input type="text" id="companias.1.siniestroUrl" data-path="companias.1.siniestroUrl" /></div>
-            <div class="admin-field"><label for="companias.1.patpacUrl">Inscribir PAT/PAC</label><input type="text" id="companias.1.patpacUrl" data-path="companias.1.patpacUrl" /></div>
-            <div class="admin-field"><label for="companias.1.videoUrl">Video explicativo</label><input type="text" id="companias.1.videoUrl" data-path="companias.1.videoUrl" /></div>
-            <div class="admin-field"><label for="companias.1.asistenciaUrl">Asistencia 24/7</label><input type="text" id="companias.1.asistenciaUrl" data-path="companias.1.asistenciaUrl" /></div>
           </div>
         </details>
 
@@ -161,8 +156,6 @@
             <div class="admin-field"><label for="companias.2.pagarUrl">Pagar en línea</label><input type="text" id="companias.2.pagarUrl" data-path="companias.2.pagarUrl" /></div>
             <div class="admin-field"><label for="companias.2.siniestroUrl">Declarar siniestro</label><input type="text" id="companias.2.siniestroUrl" data-path="companias.2.siniestroUrl" /></div>
             <div class="admin-field"><label for="companias.2.patpacUrl">Inscribir PAT/PAC</label><input type="text" id="companias.2.patpacUrl" data-path="companias.2.patpacUrl" /></div>
-            <div class="admin-field"><label for="companias.2.videoUrl">Video explicativo</label><input type="text" id="companias.2.videoUrl" data-path="companias.2.videoUrl" /></div>
-            <div class="admin-field"><label for="companias.2.asistenciaUrl">Asistencia 24/7</label><input type="text" id="companias.2.asistenciaUrl" data-path="companias.2.asistenciaUrl" /></div>
           </div>
         </details>
 
@@ -181,9 +174,6 @@
           <div class="grid-2">
             <div class="admin-field"><label for="companias.3.pagarUrl">Pagar en línea</label><input type="text" id="companias.3.pagarUrl" data-path="companias.3.pagarUrl" /></div>
             <div class="admin-field"><label for="companias.3.siniestroUrl">Declarar siniestro</label><input type="text" id="companias.3.siniestroUrl" data-path="companias.3.siniestroUrl" /></div>
-            <div class="admin-field"><label for="companias.3.patpacUrl">Inscribir PAT/PAC</label><input type="text" id="companias.3.patpacUrl" data-path="companias.3.patpacUrl" /></div>
-            <div class="admin-field"><label for="companias.3.videoUrl">Video explicativo</label><input type="text" id="companias.3.videoUrl" data-path="companias.3.videoUrl" /></div>
-            <div class="admin-field"><label for="companias.3.asistenciaUrl">Asistencia 24/7</label><input type="text" id="companias.3.asistenciaUrl" data-path="companias.3.asistenciaUrl" /></div>
           </div>
         </details>
 
@@ -202,9 +192,6 @@
           <div class="grid-2">
             <div class="admin-field"><label for="companias.4.pagarUrl">Pagar en línea</label><input type="text" id="companias.4.pagarUrl" data-path="companias.4.pagarUrl" /></div>
             <div class="admin-field"><label for="companias.4.siniestroUrl">Declarar siniestro</label><input type="text" id="companias.4.siniestroUrl" data-path="companias.4.siniestroUrl" /></div>
-            <div class="admin-field"><label for="companias.4.patpacUrl">Inscribir PAT/PAC</label><input type="text" id="companias.4.patpacUrl" data-path="companias.4.patpacUrl" /></div>
-            <div class="admin-field"><label for="companias.4.videoUrl">Video explicativo</label><input type="text" id="companias.4.videoUrl" data-path="companias.4.videoUrl" /></div>
-            <div class="admin-field"><label for="companias.4.asistenciaUrl">Asistencia 24/7</label><input type="text" id="companias.4.asistenciaUrl" data-path="companias.4.asistenciaUrl" /></div>
           </div>
         </details>
 
@@ -223,9 +210,6 @@
           <div class="grid-2">
             <div class="admin-field"><label for="companias.5.pagarUrl">Pagar en línea</label><input type="text" id="companias.5.pagarUrl" data-path="companias.5.pagarUrl" /></div>
             <div class="admin-field"><label for="companias.5.siniestroUrl">Declarar siniestro</label><input type="text" id="companias.5.siniestroUrl" data-path="companias.5.siniestroUrl" /></div>
-            <div class="admin-field"><label for="companias.5.patpacUrl">Inscribir PAT/PAC</label><input type="text" id="companias.5.patpacUrl" data-path="companias.5.patpacUrl" /></div>
-            <div class="admin-field"><label for="companias.5.videoUrl">Video explicativo</label><input type="text" id="companias.5.videoUrl" data-path="companias.5.videoUrl" /></div>
-            <div class="admin-field"><label for="companias.5.asistenciaUrl">Asistencia 24/7</label><input type="text" id="companias.5.asistenciaUrl" data-path="companias.5.asistenciaUrl" /></div>
           </div>
         </details>
       </section>
