@@ -522,7 +522,7 @@ body.menu-open .whatsapp-btn { opacity: 0; visibility: hidden; pointer-events: n
 
   .grid-services { grid-template-columns: repeat(2, 1fr); }
   .grid-companies { grid-template-columns: repeat(2, 1fr); }
-  .grid-ramos { grid-template-columns: repeat(3, 1fr); }
+  .grid-ramos { grid-template-columns: repeat(2, 1fr); }
   .asistencia-grid { grid-template-columns: repeat(2, 1fr); }
   .form-grid { grid-template-columns: 1fr 1fr; }
   .form-group-full { grid-column: 1 / -1; }
@@ -556,6 +556,7 @@ body.menu-open .whatsapp-btn { opacity: 0; visibility: hidden; pointer-events: n
   .inspection-section, .companies-section, .about-section, .asistencia-section { padding-top: 88px; padding-bottom: 88px; }
 
   .grid-services { grid-template-columns: repeat(4, 1fr); }
+  .grid-ramos { grid-template-columns: repeat(4, 1fr); }
   .asistencia-grid { grid-template-columns: repeat(3, 1fr); }
 
   .companies-layout { flex-direction: row; align-items: stretch; }

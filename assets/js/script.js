@@ -379,6 +379,19 @@ document.addEventListener('DOMContentLoaded', () => {
         ...contactoComun,
       ],
     },
+    'ramos-varios': {
+      titulo: 'Cotizar Ramos varios',
+      bajada: 'Cuéntanos qué necesitas y te mostramos opciones de varias compañías.',
+      asunto: 'Cotización Ramos varios',
+      campos: [
+        { id: 'tipo-seguro', etiqueta: '¿Qué tipo de seguro necesitas?', obligatorio: true, ancho: 'completo', placeholder: 'Ej: vida, salud, viaje, accidentes personales...' },
+        { id: 'persona', etiqueta: 'Persona', tipo: 'select', obligatorio: true, opciones: ['Natural', 'Jurídica'] },
+        { id: 'nombre', etiqueta: 'Nombre completo', obligatorio: true, placeholder: 'Tu nombre' },
+        { id: 'rut', etiqueta: 'Rut', obligatorio: true, validar: 'rut', placeholder: '12.345.678-9' },
+        { id: 'direccion', etiqueta: 'Dirección', ancho: 'completo', placeholder: 'Calle, número' },
+        ...contactoComun,
+      ],
+    },
     contacto: {
       titulo: 'Formulario de contacto',
       bajada: 'EscrÃ­benos y te respondemos a la brevedad.',
