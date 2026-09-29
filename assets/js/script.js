@@ -299,59 +299,84 @@ document.addEventListener('DOMContentLoaded', () => {
        validar: 'rut'      -> valida RUT chileno
        ancho: 'completo'   -> ocupa las dos columnas
      ========================================================================== */
-  const datosPersonales = [
-    { id: 'nombre', etiqueta: 'Nombre completo', obligatorio: true, placeholder: 'Tu nombre' },
-    { id: 'rut', etiqueta: 'RUT del contratante', obligatorio: true, validar: 'rut', placeholder: '12.345.678-9' },
+  // Datos de contacto que se agregan al final de los 3 formularios de cotización
+  // (definidos en la pestaña "ramos varios" de la planilla que armó Alfapymes).
+  const contactoComun = [
     { id: 'telefono', etiqueta: 'Teléfono', tipo: 'tel', obligatorio: true, placeholder: '+56 9 ....' },
     { id: 'correo', etiqueta: 'Correo electrónico', tipo: 'email', obligatorio: true, placeholder: 'tucorreo@ejemplo.cl' },
+    { id: 'contacto-por', etiqueta: '¿Cómo prefieres que te contactemos?', tipo: 'select', obligatorio: true, opciones: ['WhatsApp', 'Teléfono', 'Correo electrónico'] },
   ];
-  const comentarios = { id: 'comentarios', etiqueta: 'Comentarios (opcional)', tipo: 'textarea', ancho: 'completo', placeholder: 'Cuéntanos algo más que debamos saber' };
 
   const FORMULARIOS = {
     hogar: {
+      // Campos según la pestaña "hogar" de la planilla de cotización.
       titulo: 'Cotizar seguro de Hogar',
       bajada: 'Completa tus datos y te mostramos opciones de varias compañías.',
       asunto: 'Cotización Hogar',
       campos: [
-        ...datosPersonales,
-        { id: 'tipo-vivienda', etiqueta: 'Tipo de vivienda', tipo: 'select', obligatorio: true, opciones: ['Casa', 'Departamento'] },
-        { id: 'comuna', etiqueta: 'Comuna', obligatorio: true },
-        { id: 'direccion', etiqueta: 'Dirección de la propiedad', obligatorio: true, ancho: 'completo', placeholder: 'Calle, número, depto.' },
-        { id: 'metros', etiqueta: 'Metros cuadrados construidos', tipo: 'number', placeholder: 'Ej: 80' },
-        { id: 'anio', etiqueta: 'Año de construcción', tipo: 'number', placeholder: 'Ej: 2005' },
-        { id: 'cobertura', etiqueta: '¿Qué quieres asegurar?', tipo: 'checks', ancho: 'completo', opciones: ['Incendio y sismo', 'Robo', 'Contenido', 'Responsabilidad civil'] },
-        comentarios,
+        { id: 'nombre', etiqueta: 'Nombre completo', obligatorio: true, placeholder: 'Tu nombre' },
+        { id: 'rut', etiqueta: 'Rut', obligatorio: true, validar: 'rut', placeholder: '12.345.678-9' },
+        { id: 'direccion', etiqueta: 'Dirección a cotizar', obligatorio: true, ancho: 'completo', placeholder: 'Calle, número, depto.' },
+        { id: 'tipo-inmueble', etiqueta: 'Tipo de inmueble', tipo: 'select', obligatorio: true, opciones: ['Casa', 'Departamento'] },
+        { id: 'clase-construccion', etiqueta: 'Clase de construcción', tipo: 'select', obligatorio: true, opciones: ['Adobe', 'Ligero o madera', 'Ligero no madera', 'Sólido concreto', 'Sólido ladrillo'] },
+        { id: 'antiguedad', etiqueta: 'Antigüedad de la construcción', tipo: 'select', obligatorio: true, opciones: ['Posterior a 2000', 'Entre 1994 y 2000', '1985 a 1993', '1973 a 1984', '1953 a 1972'] },
+        { id: 'hipotecario', etiqueta: '¿Es hipotecario?', tipo: 'select', obligatorio: true, opciones: ['Sí', 'No'] },
+        { id: 'tipo-ubicacion', etiqueta: 'Tipo de ubicación', tipo: 'select', obligatorio: true, opciones: ['Urbano', 'Rural'] },
+        { id: 'bomberos', etiqueta: '¿Tiene bomberos a más de 20 km?', tipo: 'select', obligatorio: true, opciones: ['Sí', 'No'] },
+        { id: 'valor-reconstruccion', etiqueta: 'Valor reconstrucción (UF)', tipo: 'number', placeholder: 'Ej: 2500' },
+        { id: 'valor-contenido', etiqueta: 'Valor contenido (UF)', tipo: 'number', placeholder: 'Ej: 400' },
+        { id: 'nota-valores', etiqueta: 'Puedes completar solo uno de los dos valores de arriba, o ambos.', tipo: 'nota', ancho: 'completo' },
+        ...contactoComun,
       ],
     },
     autos: {
-      titulo: 'Cotizar seguro de Autos',
+      // Campos según la pestaña "vehículo" de la planilla de cotización.
+      titulo: 'Cotizar seguro de Vehículo',
       bajada: 'Completa tus datos y te mostramos opciones de varias compañías.',
-      asunto: 'Cotización Autos',
+      asunto: 'Cotización Vehículo',
       campos: [
-        ...datosPersonales,
+        { id: 'persona', etiqueta: 'Persona', tipo: 'select', obligatorio: true, opciones: ['Natural', 'Jurídica'] },
+        { id: 'nombre', etiqueta: 'Nombre completo', obligatorio: true, placeholder: 'Tu nombre' },
+        { id: 'rut', etiqueta: 'Rut', obligatorio: true, validar: 'rut', placeholder: '12.345.678-9' },
         { id: 'patente', etiqueta: 'Patente', obligatorio: true, placeholder: 'Ej: ABCD12' },
-        { id: 'tipo-vehiculo', etiqueta: 'Tipo de vehículo', tipo: 'select', obligatorio: true, opciones: ['Auto', 'Camioneta', 'SUV', 'Furgón', 'Moto'] },
         { id: 'marca', etiqueta: 'Marca', obligatorio: true },
         { id: 'modelo', etiqueta: 'Modelo', obligatorio: true },
-        { id: 'anio', etiqueta: 'Año del vehículo', tipo: 'number', obligatorio: true, placeholder: 'Ej: 2020' },
-        { id: 'uso', etiqueta: 'Uso', tipo: 'select', obligatorio: true, opciones: ['Particular', 'Comercial / trabajo', 'Aplicaciones de transporte'] },
-        { id: 'cobertura', etiqueta: 'Cobertura que buscas', tipo: 'select', ancho: 'completo', opciones: ['Todo riesgo', 'Daños a terceros', 'No estoy seguro, necesito asesoría'] },
-        comentarios,
+        { id: 'vehiculo-uso', etiqueta: '¿Nuevo o usado?', tipo: 'select', obligatorio: true, opciones: ['Nuevo', 'Usado'] },
+        { id: 'anio', etiqueta: 'Año', tipo: 'number', obligatorio: true, placeholder: 'Ej: 2020' },
+        { id: 'tipo', etiqueta: 'Tipo', tipo: 'select', obligatorio: true, opciones: ['Particular', 'Comercial'] },
+        { id: 'direccion', etiqueta: 'Dirección (calle y número)', obligatorio: true, ancho: 'completo', placeholder: 'Calle y número' },
+        { id: 'depto', etiqueta: 'Depto (opcional)', placeholder: 'Depto, oficina, etc.' },
+        ...contactoComun,
       ],
     },
     pymes: {
+      // Campos según la pestaña "Pymes" de la planilla de cotización.
       titulo: 'Cotizar seguro para Pymes',
       bajada: 'Cuéntanos de tu negocio y te mostramos opciones de varias compañías.',
       asunto: 'Cotización Pymes',
       campos: [
-        ...datosPersonales,
-        { id: 'negocio', etiqueta: 'Nombre o razón social del negocio', obligatorio: true },
-        { id: 'giro', etiqueta: 'Giro del negocio', obligatorio: true, placeholder: 'Ej: Comercio, restaurante, taller' },
-        { id: 'direccion', etiqueta: 'Dirección del local', obligatorio: true, ancho: 'completo', placeholder: 'Calle, número, local' },
-        { id: 'comuna', etiqueta: 'Comuna', obligatorio: true },
-        { id: 'metros', etiqueta: 'Metros cuadrados del local', tipo: 'number', placeholder: 'Ej: 60' },
-        { id: 'cobertura', etiqueta: '¿Qué quieres asegurar?', tipo: 'checks', ancho: 'completo', opciones: ['Incendio y sismo', 'Robo', 'Equipos y maquinaria', 'Responsabilidad civil', 'Continuidad operativa'] },
-        comentarios,
+        { id: 'persona', etiqueta: 'Persona', tipo: 'select', obligatorio: true, opciones: ['Natural', 'Jurídica'] },
+        { id: 'nombre', etiqueta: 'Nombre completo', obligatorio: true, placeholder: 'Tu nombre' },
+        { id: 'rut', etiqueta: 'Rut', obligatorio: true, validar: 'rut', placeholder: '12.345.678-9' },
+        { id: 'tipo-ubicacion', etiqueta: 'Tipo de ubicación', tipo: 'select', obligatorio: true, opciones: ['Urbano', 'Rural'] },
+        { id: 'direccion', etiqueta: 'Dirección', obligatorio: true, ancho: 'completo', placeholder: 'Calle, número' },
+        { id: 'depto-oficina', etiqueta: 'Depto / Oficina', placeholder: 'Opcional' },
+        { id: 'construccion-muro', etiqueta: 'Construcción del muro', tipo: 'select', obligatorio: true, opciones: ['Concreto', 'Albañilería simple', 'Albañilería reforzada', 'Asbesto cemento', 'Bloques de cemento', 'Plancha metálica', 'Madera', 'Adobe', 'Panel sándwich'] },
+        { id: 'construccion-techo', etiqueta: 'Construcción del techo', tipo: 'select', obligatorio: true, opciones: ['Concreto', 'Asbesto cemento', 'Plancha metálica', 'Tejas o similares', 'Sólidos generales', 'Panel sándwich'] },
+        { id: 'antiguedad', etiqueta: 'Años de antigüedad', tipo: 'select', obligatorio: true, opciones: ['Menos de 15 años', '15 a 25 años', '25 a 50 años', '50 a 75 años', 'Más de 75 años'] },
+        { id: 'pisos', etiqueta: 'Número de pisos', tipo: 'number', obligatorio: true, placeholder: 'Ej: 1' },
+        { id: 'actividad', etiqueta: 'Actividad', obligatorio: true, placeholder: 'Giro del negocio' },
+        { id: 'cercania-mar', etiqueta: '¿Está a menos de 3 cuadras o 15 metros del mar o un río?', tipo: 'select', ancho: 'completo', obligatorio: true, opciones: ['Sí', 'No'] },
+        { id: 'nota-montos', etiqueta: 'Montos a asegurar en UF (completa los que correspondan a tu negocio):', tipo: 'nota', ancho: 'completo' },
+        { id: 'monto-edificio', etiqueta: 'Edificio (UF)', tipo: 'number' },
+        { id: 'monto-contenidos', etiqueta: 'Instalaciones y contenidos (UF)', tipo: 'number' },
+        { id: 'monto-mercaderia', etiqueta: 'Mercadería (UF)', tipo: 'number' },
+        { id: 'monto-equipo', etiqueta: 'Equipo electrónico (UF)', tipo: 'number' },
+        { id: 'monto-maquinaria', etiqueta: 'Maquinaria (UF)', tipo: 'number' },
+        { id: 'monto-rc', etiqueta: 'Responsabilidad civil (UF)', tipo: 'number' },
+        { id: 'cristales', etiqueta: 'Cristales (UF)', tipo: 'select', opciones: ['50', '100', '300', '500', '1000'] },
+        { id: 'trabajadores', etiqueta: 'Número de trabajadores', tipo: 'number', obligatorio: true, placeholder: 'Ej: 5' },
+        ...contactoComun,
       ],
     },
     contacto: {
@@ -378,6 +403,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const id = `mf-${c.id}`;
     const grupo = document.createElement('div');
     grupo.className = 'form-group' + (c.ancho === 'completo' ? ' form-group-full' : '');
+
+    if (c.tipo === 'nota') {
+      grupo.className += ' form-note';
+      const p = document.createElement('p');
+      p.textContent = c.etiqueta;
+      grupo.appendChild(p);
+      return grupo;
+    }
 
     if (c.tipo === 'checks') {
       const fs = document.createElement('fieldset');
@@ -473,15 +506,17 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       if (!formularioActivo || !validarFormulario(modalForm)) return;
 
-      const datos = formularioActivo.campos.map(c => {
-        let valor;
-        if (c.tipo === 'checks') {
-          valor = [...modalForm.querySelectorAll(`input[name="${c.id}"]:checked`)].map(cb => cb.value).join(', ');
-        } else {
-          valor = modalForm.elements[c.id].value.trim();
-        }
-        return [c.etiqueta, valor];
-      });
+      const datos = formularioActivo.campos
+        .filter(c => c.tipo !== 'nota')
+        .map(c => {
+          let valor;
+          if (c.tipo === 'checks') {
+            valor = [...modalForm.querySelectorAll(`input[name="${c.id}"]:checked`)].map(cb => cb.value).join(', ');
+          } else {
+            valor = modalForm.elements[c.id].value.trim();
+          }
+          return [c.etiqueta, valor];
+        });
 
       modalSubmit.disabled = true;
       modalSubmit.textContent = 'Enviando...';
